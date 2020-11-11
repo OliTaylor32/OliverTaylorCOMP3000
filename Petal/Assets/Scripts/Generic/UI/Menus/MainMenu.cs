@@ -38,6 +38,19 @@ public class MainMenu : MonoBehaviour
                 StartCoroutine(CoolDown());
             }
         }
+
+        if (Input.GetButton("Jump"))
+        {
+            if (selected == 0)
+            {
+                Application.LoadLevel("MainGameMenu");
+            }
+
+            if (selected == 3)
+            {
+                Application.LoadLevel("Awards");
+            }
+        }
     }
 
     private IEnumerator CoolDown()
