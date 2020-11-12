@@ -46,6 +46,11 @@ public class MainMenu : MonoBehaviour
                 Application.LoadLevel("MainGameMenu");
             }
 
+            if (selected == 2)
+            {
+                Application.LoadLevel("Extras");
+            }
+
             if (selected == 3)
             {
                 Application.LoadLevel("Awards");

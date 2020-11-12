@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\Generic\UI\LevelSelect.cs" />
     <Compile Include="Assets\Scripts\Generic\UI\LifeMeter.cs" />
     <Compile Include="Assets\Scripts\Generic\UI\Menus\AwardSelector.cs" />
+    <Compile Include="Assets\Scripts\Generic\UI\Menus\ExtrasMenu.cs" />
     <Compile Include="Assets\Scripts\Generic\UI\Menus\MainGameSelect.cs" />
     <Compile Include="Assets\Scripts\Generic\UI\Menus\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Generic\UI\Scoring.cs" />
