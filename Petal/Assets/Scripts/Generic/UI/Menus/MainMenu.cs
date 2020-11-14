@@ -55,6 +55,11 @@ public class MainMenu : MonoBehaviour
             {
                 Application.LoadLevel("Awards");
             }
+
+            if (selected == 4)
+            {
+                Application.Quit();
+            }
         }
     }
 

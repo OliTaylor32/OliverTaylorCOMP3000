@@ -9923,7 +9923,7 @@ GameObject:
   - component: {fileID: 716757262}
   - component: {fileID: 716757261}
   m_Layer: 0
-  m_Name: Options
+  m_Name: Exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9961,7 +9961,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a50f4cee53b5d274c875fe908f635517, type: 2}
+  - {fileID: 2100000, guid: 6fb1dd1c4d6146e47beb2d117c891733, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9998,8 +9998,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 716757260}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: -527.4297, y: -16.803164, z: -151.37282}
-  m_LocalScale: {x: 0.49888, y: 1, z: 0.21133}
+  m_LocalPosition: {x: -528.261, y: -16.803164, z: -151.389}
+  m_LocalScale: {x: 0.3295163, y: 0.8532425, z: 0.18031573}
   m_Children: []
   m_Father: {fileID: 1798395974}
   m_RootOrder: 4
@@ -10381,7 +10381,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 2.797e-42, z: 0, w: 4.947651e-10}
+  m_BoundingSphereOverride: {x: 3.526e-42, y: 1.01e-43, z: 9.12e-43, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
