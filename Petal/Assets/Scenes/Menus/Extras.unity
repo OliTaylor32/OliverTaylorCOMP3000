@@ -757,7 +757,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Conquer the wheel all around the world.
+  m_text: Race against the developer's best times.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
@@ -826,10 +826,10 @@ MonoBehaviour:
   m_margin: {x: 3.0963488, y: 0, z: 9.4516735, w: 0.9353695}
   m_textInfo:
     textComponent: {fileID: 938490026}
-    characterCount: 39
+    characterCount: 40
     spriteCount: 0
-    spaceCount: 6
-    wordCount: 7
+    spaceCount: 5
+    wordCount: 6
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -1390,7 +1390,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 2.797e-42, z: 0, w: 4.947651e-10}
+  m_BoundingSphereOverride: {x: NaN, y: 8.3e-44, z: 2.428e-42, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
