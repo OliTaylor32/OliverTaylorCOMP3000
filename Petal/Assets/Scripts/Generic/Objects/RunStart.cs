@@ -8,7 +8,7 @@ public class RunStart : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rotation = transform.rotation.eulerAngles.y;
+        rotation = transform.rotation.eulerAngles.y - 90f;
     }
 
     // Update is called once per frame

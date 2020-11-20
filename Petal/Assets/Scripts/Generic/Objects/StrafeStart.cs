@@ -10,7 +10,7 @@ public class StrafeStart : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rotation = transform.rotation.eulerAngles.y;
+        rotation = transform.rotation.eulerAngles.y - 90f;
         x = transform.position.x;
         z = transform.position.z;
     }
