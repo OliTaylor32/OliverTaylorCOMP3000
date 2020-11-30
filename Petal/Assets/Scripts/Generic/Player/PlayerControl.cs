@@ -6,7 +6,7 @@ public class PlayerControl : MonoBehaviour
 {
     public GameObject player;
     //Controller for what type of controls the game is using.
-    private int controlType = 0; // 0 = Run / 1 = sidestep / 2 = combat / 3 = Scripted
+    public int controlType = 0; // 0 = Run / 1 = sidestep / 2 = combat / 3 = Free-Roam / 4 = scripted
     public Scoring score;
     private Animator anim;
 
@@ -26,7 +26,7 @@ public class PlayerControl : MonoBehaviour
     //Boosting Variables
     public  int boost = 0;
     private int boostSpeed = 100;
-    public int maxBoost = 500;
+    public int maxBoost = 200;
     public bool boosting;
 
     //Running Variables
@@ -36,6 +36,8 @@ public class PlayerControl : MonoBehaviour
     public Quaternion targetRotation;
     private bool stomping;
     private bool drifting;
+
+    //Hub amd Combat Variables
 
     //Input Variables
     float horizontalAxis;
@@ -63,6 +65,10 @@ public class PlayerControl : MonoBehaviour
 
         if (controlType == 0)
         {
+            camera.transform.parent = transform;
+            camera.transform.localPosition = new Vector3(35, 10, 1);
+            camera.transform.localRotation = Quaternion.Euler(0f, 270f, 0f);
+
             if (verticalAxis >= 0.01)
             {
                 acceleration = 0.5f;
@@ -146,6 +152,197 @@ public class PlayerControl : MonoBehaviour
             Vector3 movement = new Vector3(sideMovement, 0, speed);
             movement = camera.transform.rotation * movement;
             player.GetComponent<CharacterController>().Move(movement * Time.deltaTime);
+
+
+        }
+
+        if (controlType == 1)
+        {
+            camera.transform.parent = transform;
+            camera.transform.localPosition = new Vector3(35, 10, 1);
+            camera.transform.localRotation = Quaternion.Euler(0f, 270f, 0f);
+
+            anim.SetBool("Run", true);
+            anim.SetBool("Idle", false);
+            acceleration = 0f;
+            camera.transform.localPosition = new Vector3(35, 10, 1);
+            camera.transform.localRotation = Quaternion.Euler(0f, 270f, 0f);
+
+            if (horizontalAxis >= 0.01)
+            {
+                sideMovement = 0.5f;
+                print("Right");
+            }
+
+            if (horizontalAxis <= -0.01)
+            {
+                sideMovement = -0.5f;
+                print("Left");
+            }
+
+            if (horizontalAxis < 0.01 && horizontalAxis > -0.01)
+            {
+                sideMovement = 0f;
+            }
+
+            speed = speed + acceleration;
+            speed = Mathf.Clamp(speed, 0, maxSpeed);
+
+            if (Input.GetButton("Boost") && controller.isGrounded && boost > 0)
+            {
+                speed = boostSpeed;
+                boost--;
+                boosting = true;
+            }
+            else
+            {
+                boosting = false;
+            }
+
+            Vector3 movement = new Vector3(0, 0, speed);
+            movement = camera.transform.rotation * movement;
+            player.GetComponent<CharacterController>().Move(movement * Time.deltaTime);
+
+            movement = new Vector3(sideMovement, 0, 0);
+            movement = camera.transform.rotation * movement;
+            player.GetComponent<CharacterController>().Move(movement);
+
+        }
+
+        Vector3 dir;
+        Vector3 oldPos;
+        if (controlType == 2)
+        {
+            //Camera is in fixed position, points towards player
+            //Movement dependant on camera
+            //Speed max speed is halfed. 
+            //No boosting
+            camera.transform.parent = null;
+            camera.transform.LookAt(gameObject.transform);
+
+            oldPos = transform.position;
+            dir = camera.transform.right * horizontalAxis;
+            dir.Normalize();
+            player.GetComponent<CharacterController>().Move(dir * (maxSpeed / 4) * Time.deltaTime);
+            dir = camera.transform.forward * verticalAxis;
+            dir.Normalize();
+            player.GetComponent<CharacterController>().Move(dir * (maxSpeed / 4) * Time.deltaTime);
+            if (verticalAxis == 0 && horizontalAxis == 0)
+            {
+                speed = 0;
+            }
+            else
+            {
+                speed = 1;
+                player.transform.LookAt((transform.position - oldPos) + transform.position);
+                player.transform.Rotate(0, 90, 0);
+            }
+        }
+        if (controlType == 3)
+        {
+            //Camera is in fixed position, points towards player
+            //Movement dependant on camera
+            //Speed max speed is halfed. 
+            //No boosting
+            camera.transform.parent = null;
+            camera.transform.SetPositionAndRotation(new Vector3(gameObject.transform.position.x + 7, gameObject.transform.position.y + 1, gameObject.transform.position.z), camera.transform.rotation);
+            camera.transform.LookAt(gameObject.transform);
+
+            oldPos = transform.position;
+            dir = camera.transform.right * horizontalAxis;
+            dir.Normalize();
+            player.GetComponent<CharacterController>().Move(dir * (maxSpeed / 4) * Time.deltaTime);
+            dir = camera.transform.forward * verticalAxis;
+            dir.Normalize();
+            player.GetComponent<CharacterController>().Move(dir * (maxSpeed / 4) * Time.deltaTime);
+            if (verticalAxis == 0 && horizontalAxis == 0)
+            {
+                speed = 0;
+            }
+            else
+            {
+                speed = 1;
+                player.transform.LookAt((transform.position - oldPos) + transform.position);
+                player.transform.Rotate(0, 90, 0);
+            }
+
+
+        }
+
+
+        if (speed == boostSpeed)
+        {
+            if (camera.GetComponent<Camera>().fieldOfView != 80)
+            {
+                    camera.GetComponent<Camera>().fieldOfView = camera.GetComponent<Camera>().fieldOfView + 1;
+            }
+        }
+            else
+            {
+                if (camera.GetComponent<Camera>().fieldOfView != 60)
+                {
+                    camera.GetComponent<Camera>().fieldOfView = camera.GetComponent<Camera>().fieldOfView - 1;
+                }
+            }
+            //////////
+            //Tricks//
+            //////////
+            if (Input.GetButtonDown("Trick") == true && canTrick == true)
+            {
+                boost = boost + 10;
+                score.AddScore(10);
+                print("Trick");
+            }
+
+
+            //player.transform.localPosition = new Vector3(player.transform.localPosition.x + sideMovement, player.transform.localPosition.y, player.transform.localPosition.z);
+
+            /////////////
+            ///Jumping///
+            /////////////
+            if (Input.GetButton("Jump") && jumping == false && controller.isGrounded == true)
+            {
+                jumping = true;
+                print("Jump");
+                StartCoroutine(Jump());
+
+            }
+
+            /////////////
+            ///Gravity///
+            /////////////
+            if (controller.isGrounded)
+            {
+                jumping = false;
+                canTrick = false;
+            }
+
+            if (controller.isGrounded == false && jumping == false)
+            {
+                Vector3 grav = new Vector3(0, gravity, 0);
+                player.GetComponent<CharacterController>().Move(-(grav * Time.deltaTime));
+            }
+
+            //////////////
+            ///Drifting///
+            //////////////
+            if (Input.GetButton("Drift") && controller.isGrounded == true)
+            {
+                drifting = true;
+            }
+            else
+            {
+                drifting = false;
+            }
+
+            //Ensure Player doesn't exceed boost limit
+            boost = Mathf.Clamp(boost, 0, maxBoost);
+
+            //Death
+            if (life <= 0)
+            {
+                Application.LoadLevel(Application.loadedLevel);
+            }
 
             ///////////////
             ///Animation///
@@ -240,130 +437,8 @@ public class PlayerControl : MonoBehaviour
                     anim.speed = 1;
                 }
             }
-        }
 
-        if (controlType == 1)
-        {
-            anim.SetBool("Run", true);
-            anim.SetBool("Idle", false);
-            acceleration = 0f;
-
-            if (horizontalAxis >= 0.01)
-            {
-                sideMovement = 0.5f;
-                print("Right");
-            }
-
-            if (horizontalAxis <= -0.01)
-            {
-                sideMovement = -0.5f;
-                print("Left");
-            }
-
-            if (horizontalAxis < 0.01 && horizontalAxis > -0.01)
-            {
-                sideMovement = 0f;
-            }
-
-            speed = speed + acceleration;
-            speed = Mathf.Clamp(speed, 0, maxSpeed);
-
-            if (Input.GetButton("Boost") && controller.isGrounded && boost > 0)
-            {
-                speed = boostSpeed;
-                boost--;
-                boosting = true;
-            }
-            else
-            {
-                boosting = false;
-            }
-
-            Vector3 movement = new Vector3(0, 0, speed);
-            movement = camera.transform.rotation * movement;
-            player.GetComponent<CharacterController>().Move(movement * Time.deltaTime);
-
-            movement = new Vector3(sideMovement, 0, 0);
-            movement = camera.transform.rotation * movement;
-            player.GetComponent<CharacterController>().Move(movement);
-
-        }
-
-        if (speed == boostSpeed)
-        {
-            if (camera.GetComponent<Camera>().fieldOfView != 80)
-            {
-                camera.GetComponent<Camera>().fieldOfView = camera.GetComponent<Camera>().fieldOfView + 1;
-            }
-        }
-        else
-        {
-            if (camera.GetComponent<Camera>().fieldOfView != 60)
-            {
-                camera.GetComponent<Camera>().fieldOfView = camera.GetComponent<Camera>().fieldOfView - 1;
-            }
-        }
-        //////////
-        //Tricks//
-        //////////
-        if (Input.GetButtonDown("Trick") == true && canTrick == true)
-        {
-            boost = boost + 10;
-            score.AddScore(10);
-            print("Trick");
-        }
-
-
-        //player.transform.localPosition = new Vector3(player.transform.localPosition.x + sideMovement, player.transform.localPosition.y, player.transform.localPosition.z);
-
-        /////////////
-        ///Jumping///
-        /////////////
-        if (Input.GetButton("Jump") && jumping == false && controller.isGrounded == true)
-        {
-            jumping = true;
-            print("Jump");
-            StartCoroutine(Jump());
-
-        }
-
-        /////////////
-        ///Gravity///
-        /////////////
-        if (controller.isGrounded)
-        {
-            jumping = false;
-            canTrick = false;
-        }
-
-        if (controller.isGrounded == false && jumping == false)
-        {
-            Vector3 grav = new Vector3(0, gravity, 0);
-            player.GetComponent<CharacterController>().Move(-(grav * Time.deltaTime));
-        }
-
-        //////////////
-        ///Drifting///
-        //////////////
-        if (Input.GetButton("Drift") && controller.isGrounded == true)
-        {
-            drifting = true;
-        }
-        else
-        {
-            drifting = false;
-        }
-
-        //Ensure Player doesn't exceed boost limit
-        boost = Mathf.Clamp(boost, 0, maxBoost);
-
-        //Death
-        if (life <= 0)
-        {
-            Application.LoadLevel(Application.loadedLevel);
-        }
     }
-
     private IEnumerator Jump()
     {
         float height = 0;
@@ -475,4 +550,5 @@ public class PlayerControl : MonoBehaviour
         yield return new WaitForSeconds(1);
         invincible = false;
     }
+
 }

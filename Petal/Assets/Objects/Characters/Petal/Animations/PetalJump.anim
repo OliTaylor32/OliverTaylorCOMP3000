@@ -19,7 +19,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: -68.684006, y: 90.00001, z: -90.00001}
+        value: {x: 29.283, y: -49.061, z: -54.369003}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -29,13 +29,13 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: BlendBody/RightLeg
+    path: PetalHead (1)/Armature.003/Bone 2/Bone.001/Bone.003
   - curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 60.624004, y: 90.89001, z: 117.369}
+        value: {x: -44.734, y: 65.889, z: -0.90700006}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -45,13 +45,13 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: BlendBody/RightLeg/UpperLegR/LowerLegR
+    path: PetalHead (1)/Armature.003/Bone 2/Bone.002 1/Bone.005
   - curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: -243.176, y: 75.01299, z: 90.384995}
+        value: {x: -15.493001, y: 16.458, z: 41.701}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -61,13 +61,13 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: BlendBody/LeftLeg/UpperLegL/LowerLegL/BlendShoeL
+    path: PetalHead (1)/Armature.003/Bone 2/Bone.002 1/Bone.005/Bone.006
   - curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: -45.146004, y: -35.535, z: 43.24}
+        value: {x: -0.028, y: 0, z: -87.053}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -77,13 +77,13 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: BlendBody/LeftArm
+    path: PetalHead (1)/Armature.003/Bone.007/Bone.009/Bone.010
   - curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 28.385002, y: 16.697, z: 10.865001}
+        value: {x: 32.848003, y: 0, z: 69.27901}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -93,13 +93,13 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: BlendBody/LeftArm/UpperArmL/LowerArmL
+    path: PetalHead (1)/Armature.003/Bone.007/Bone.009
   - curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 20.275002, y: -150.93901, z: -22.041}
+        value: {x: -29.077002, y: 0, z: -21.152}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -109,13 +109,13 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: BlendBody/RightArm
+    path: PetalHead (1)/Armature.003/Bone.008/Bone.011
   - curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: -51.816, y: 318.963, z: -8.502001}
+        value: {x: 0.030000001, y: 0, z: -16.743}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -125,40 +125,8 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: BlendBody/RightArm/UpperArmR/LowerArmR
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: {x: 112.90399, y: -44.273987, z: -46.627014}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0, y: 0.33333334, z: 0.33333334}
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    path: BlendBody/LeftLeg
-  m_PositionCurves:
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: {x: -0.09, y: 1.375, z: -0.05}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0, y: 0.33333334, z: 0.33333334}
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    path: BlendBody/LeftLeg/UpperLegL/LowerLegL/BlendShoeL
+    path: PetalHead (1)/Armature.003/Bone.008/Bone.011/Bone.012
+  m_PositionCurves: []
   m_ScaleCurves: []
   m_FloatCurves: []
   m_PPtrCurves: []
@@ -170,63 +138,49 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 1556012556
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 2492129618
+      path: 33902811
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1535933896
+      path: 2709735637
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1556012556
+      path: 1963411370
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3951228035
+      path: 3199531470
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 2605811519
+      path: 1824770084
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 2030313353
+      path: 2315791066
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1213707449
-      attribute: 4
-      script: {fileID: 0}
-      typeID: 4
-      customType: 4
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 101452376
+      path: 3246166296
       attribute: 4
       script: {fileID: 0}
       typeID: 4
@@ -259,7 +213,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -68.684006
+        value: 29.283
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -270,7 +224,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: BlendBody/RightLeg
+    path: PetalHead (1)/Armature.003/Bone 2/Bone.001/Bone.003
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -278,7 +232,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 90.00001
+        value: -49.061
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -289,7 +243,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: BlendBody/RightLeg
+    path: PetalHead (1)/Armature.003/Bone 2/Bone.001/Bone.003
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -297,7 +251,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -90.00001
+        value: -54.369003
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -308,7 +262,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: BlendBody/RightLeg
+    path: PetalHead (1)/Armature.003/Bone 2/Bone.001/Bone.003
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -316,7 +270,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 60.624004
+        value: -44.734
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -327,7 +281,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: BlendBody/RightLeg/UpperLegR/LowerLegR
+    path: PetalHead (1)/Armature.003/Bone 2/Bone.002 1/Bone.005
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -335,7 +289,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 90.89001
+        value: 65.889
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -346,7 +300,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: BlendBody/RightLeg/UpperLegR/LowerLegR
+    path: PetalHead (1)/Armature.003/Bone 2/Bone.002 1/Bone.005
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -354,7 +308,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 117.369
+        value: -0.90700006
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -365,7 +319,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: BlendBody/RightLeg/UpperLegR/LowerLegR
+    path: PetalHead (1)/Armature.003/Bone 2/Bone.002 1/Bone.005
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -373,7 +327,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -243.176
+        value: -15.493001
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -384,7 +338,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: BlendBody/LeftLeg/UpperLegL/LowerLegL/BlendShoeL
+    path: PetalHead (1)/Armature.003/Bone 2/Bone.002 1/Bone.005/Bone.006
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -392,7 +346,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 75.01299
+        value: 16.458
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -403,7 +357,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: BlendBody/LeftLeg/UpperLegL/LowerLegL/BlendShoeL
+    path: PetalHead (1)/Armature.003/Bone 2/Bone.002 1/Bone.005/Bone.006
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -411,7 +365,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 90.384995
+        value: 41.701
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -422,7 +376,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: BlendBody/LeftLeg/UpperLegL/LowerLegL/BlendShoeL
+    path: PetalHead (1)/Armature.003/Bone 2/Bone.002 1/Bone.005/Bone.006
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -430,64 +384,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -0.09
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalPosition.x
-    path: BlendBody/LeftLeg/UpperLegL/LowerLegL/BlendShoeL
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1.375
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalPosition.y
-    path: BlendBody/LeftLeg/UpperLegL/LowerLegL/BlendShoeL
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: -0.05
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalPosition.z
-    path: BlendBody/LeftLeg/UpperLegL/LowerLegL/BlendShoeL
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: -45.146004
+        value: -0.028
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -498,7 +395,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: BlendBody/LeftArm
+    path: PetalHead (1)/Armature.003/Bone.007/Bone.009/Bone.010
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -506,7 +403,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -35.535
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -517,7 +414,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: BlendBody/LeftArm
+    path: PetalHead (1)/Armature.003/Bone.007/Bone.009/Bone.010
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -525,7 +422,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 43.24
+        value: -87.053
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -536,7 +433,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: BlendBody/LeftArm
+    path: PetalHead (1)/Armature.003/Bone.007/Bone.009/Bone.010
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -544,7 +441,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 28.385002
+        value: 32.848003
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -555,7 +452,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: BlendBody/LeftArm/UpperArmL/LowerArmL
+    path: PetalHead (1)/Armature.003/Bone.007/Bone.009
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -563,7 +460,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 16.697
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -574,7 +471,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: BlendBody/LeftArm/UpperArmL/LowerArmL
+    path: PetalHead (1)/Armature.003/Bone.007/Bone.009
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -582,7 +479,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 10.865001
+        value: 69.27901
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -593,7 +490,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: BlendBody/LeftArm/UpperArmL/LowerArmL
+    path: PetalHead (1)/Armature.003/Bone.007/Bone.009
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -601,7 +498,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 20.275002
+        value: -29.077002
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -612,7 +509,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: BlendBody/RightArm
+    path: PetalHead (1)/Armature.003/Bone.008/Bone.011
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -620,7 +517,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -150.93901
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -631,7 +528,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: BlendBody/RightArm
+    path: PetalHead (1)/Armature.003/Bone.008/Bone.011
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -639,7 +536,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -22.041
+        value: -21.152
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -650,7 +547,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: BlendBody/RightArm
+    path: PetalHead (1)/Armature.003/Bone.008/Bone.011
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -658,7 +555,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -51.816
+        value: 0.030000001
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -669,7 +566,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: BlendBody/RightArm/UpperArmR/LowerArmR
+    path: PetalHead (1)/Armature.003/Bone.008/Bone.011/Bone.012
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -677,7 +574,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 318.963
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -688,7 +585,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: BlendBody/RightArm/UpperArmR/LowerArmR
+    path: PetalHead (1)/Armature.003/Bone.008/Bone.011/Bone.012
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -696,7 +593,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -8.502001
+        value: -16.743
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -707,64 +604,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: BlendBody/RightArm/UpperArmR/LowerArmR
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 112.90399
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: localEulerAnglesRaw.x
-    path: BlendBody/LeftLeg
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: -44.273987
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: localEulerAnglesRaw.y
-    path: BlendBody/LeftLeg
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: -46.627014
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: localEulerAnglesRaw.z
-    path: BlendBody/LeftLeg
+    path: PetalHead (1)/Armature.003/Bone.008/Bone.011/Bone.012
     classID: 4
     script: {fileID: 0}
   m_EulerEditorCurves:
@@ -774,8 +614,8 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.z
-    path: BlendBody/RightLeg/UpperLegR/LowerLegR
+    attribute: m_LocalEulerAngles.x
+    path: PetalHead (1)/Armature.003/Bone 2/Bone.001/Bone.003
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -785,17 +625,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: BlendBody/RightLeg/UpperLegR/LowerLegR
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: BlendBody/RightLeg/UpperLegR/LowerLegR
+    path: PetalHead (1)/Armature.003/Bone 2/Bone.001/Bone.003
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -805,27 +635,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: BlendBody/LeftLeg/UpperLegL/LowerLegL/BlendShoeL
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: BlendBody/LeftLeg/UpperLegL/LowerLegL/BlendShoeL
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: BlendBody/LeftLeg/UpperLegL/LowerLegL/BlendShoeL
+    path: PetalHead (1)/Armature.003/Bone 2/Bone.001/Bone.003
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -835,7 +645,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: BlendBody/RightArm/UpperArmR/LowerArmR
+    path: PetalHead (1)/Armature.003/Bone 2/Bone.002 1/Bone.005/Bone.006
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -845,7 +655,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: BlendBody/RightArm/UpperArmR/LowerArmR
+    path: PetalHead (1)/Armature.003/Bone 2/Bone.002 1/Bone.005/Bone.006
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -855,7 +665,27 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: BlendBody/RightArm/UpperArmR/LowerArmR
+    path: PetalHead (1)/Armature.003/Bone 2/Bone.002 1/Bone.005/Bone.006
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: PetalHead (1)/Armature.003/Bone 2/Bone.002 1/Bone.005
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: PetalHead (1)/Armature.003/Bone 2/Bone.002 1/Bone.005
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -865,17 +695,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: BlendBody/LeftArm
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: BlendBody/LeftArm
+    path: PetalHead (1)/Armature.003/Bone 2/Bone.002 1/Bone.005
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -885,17 +705,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: BlendBody/LeftArm
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: BlendBody/LeftArm/UpperArmL/LowerArmL
+    path: PetalHead (1)/Armature.003/Bone.007/Bone.009/Bone.010
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -905,7 +715,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: BlendBody/LeftArm/UpperArmL/LowerArmL
+    path: PetalHead (1)/Armature.003/Bone.007/Bone.009/Bone.010
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -915,27 +725,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: BlendBody/LeftArm/UpperArmL/LowerArmL
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.z
-    path: BlendBody/RightArm
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: BlendBody/RightArm
+    path: PetalHead (1)/Armature.003/Bone.007/Bone.009/Bone.010
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -945,17 +735,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: BlendBody/RightArm
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.z
-    path: BlendBody/RightLeg
+    path: PetalHead (1)/Armature.003/Bone.007/Bone.009
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -965,37 +745,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: BlendBody/RightLeg
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: BlendBody/RightLeg
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: BlendBody/LeftLeg
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: BlendBody/LeftLeg
+    path: PetalHead (1)/Armature.003/Bone.007/Bone.009
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1005,7 +755,67 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: BlendBody/LeftLeg
+    path: PetalHead (1)/Armature.003/Bone.007/Bone.009
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: PetalHead (1)/Armature.003/Bone.008/Bone.011
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: PetalHead (1)/Armature.003/Bone.008/Bone.011
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: PetalHead (1)/Armature.003/Bone.008/Bone.011
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: PetalHead (1)/Armature.003/Bone.008/Bone.011/Bone.012
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: PetalHead (1)/Armature.003/Bone.008/Bone.011/Bone.012
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: PetalHead (1)/Armature.003/Bone.008/Bone.011/Bone.012
     classID: 4
     script: {fileID: 0}
   m_HasGenericRootTransform: 0
