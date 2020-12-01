@@ -9,6 +9,7 @@ public class PlayerControl : MonoBehaviour
     public int controlType = 0; // 0 = Run / 1 = sidestep / 2 = combat / 3 = Free-Roam / 4 = scripted
     public Scoring score;
     private Animator anim;
+    public GameObject playerModel;
 
     //General Variables
     public int life = 3;
@@ -42,6 +43,8 @@ public class PlayerControl : MonoBehaviour
     //Input Variables
     float horizontalAxis;
     float verticalAxis;
+    float horizontalAxis2;
+    float verticalAxis2;
 
     // Start is called before the first frame update
     void Start()
@@ -62,6 +65,8 @@ public class PlayerControl : MonoBehaviour
     {
         horizontalAxis = Input.GetAxis("Horizontal");
         verticalAxis = Input.GetAxis("Vertical");
+        horizontalAxis2 = Input.GetAxis("Horizontal2");
+        verticalAxis2 = Input.GetAxis("Vertical2");
 
         if (controlType == 0)
         {
@@ -240,21 +245,12 @@ public class PlayerControl : MonoBehaviour
         }
         if (controlType == 3)
         {
-            //Camera is in fixed position, points towards player
-            //Movement dependant on camera
-            //Speed max speed is halfed. 
-            //No boosting
-            camera.transform.parent = null;
-            camera.transform.SetPositionAndRotation(new Vector3(gameObject.transform.position.x + 7, gameObject.transform.position.y + 1, gameObject.transform.position.z), camera.transform.rotation);
-            camera.transform.LookAt(gameObject.transform);
-
             oldPos = transform.position;
-            dir = camera.transform.right * horizontalAxis;
-            dir.Normalize();
-            player.GetComponent<CharacterController>().Move(dir * (maxSpeed / 4) * Time.deltaTime);
-            dir = camera.transform.forward * verticalAxis;
-            dir.Normalize();
-            player.GetComponent<CharacterController>().Move(dir * (maxSpeed / 4) * Time.deltaTime);
+            transform.Rotate(0, horizontalAxis2, 0);
+            camera.transform.Rotate(-verticalAxis2, 0, 0);
+
+            Vector3 move = transform.forward * horizontalAxis + transform.right * -verticalAxis;
+            controller.Move((maxSpeed / 4) * Time.deltaTime * move);
             if (verticalAxis == 0 && horizontalAxis == 0)
             {
                 speed = 0;
@@ -262,11 +258,9 @@ public class PlayerControl : MonoBehaviour
             else
             {
                 speed = 1;
-                player.transform.LookAt((transform.position - oldPos) + transform.position);
-                player.transform.Rotate(0, 90, 0);
+                playerModel.transform.LookAt(transform.forward);
+                //playerModel.transform.Rotate(0, 90, 0);
             }
-
-
         }
 
 
