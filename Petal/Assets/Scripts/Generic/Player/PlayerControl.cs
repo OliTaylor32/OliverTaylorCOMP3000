@@ -246,7 +246,7 @@ public class PlayerControl : MonoBehaviour
         if (controlType == 3)
         {
             oldPos = transform.position;
-            transform.Rotate(0, horizontalAxis2, 0);
+            transform.Rotate(0, horizontalAxis2 * 2, 0);
             camera.transform.Rotate(-verticalAxis2, 0, 0);
 
             Vector3 move = transform.forward * horizontalAxis + transform.right * -verticalAxis;
