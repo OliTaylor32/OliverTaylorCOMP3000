@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\Generic\Player\CameraZones.cs" />
     <Compile Include="Assets\Scripts\Generic\Player\PlayerControl.cs" />
     <Compile Include="Assets\Scripts\Generic\Player\RotationControl.cs" />
+    <Compile Include="Assets\Scripts\Generic\PlayerData\MainGameData.cs" />
     <Compile Include="Assets\Scripts\Generic\UI\BoostSlider.cs" />
     <Compile Include="Assets\Scripts\Generic\UI\LevelSelect.cs" />
     <Compile Include="Assets\Scripts\Generic\UI\LifeMeter.cs" />
