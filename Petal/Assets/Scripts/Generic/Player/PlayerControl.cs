@@ -96,20 +96,20 @@ public class PlayerControl : MonoBehaviour
 
             if (horizontalAxis >= 0.01)
             {
-                sideMovement = 0.2f;
+                sideMovement = 0.4f;
                 if (drifting == true)
                 {
-                    sideMovement = 0.5f;
+                    sideMovement = 1f;
                 }
                 transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y + (sideMovement * 2), transform.rotation.eulerAngles.z);
             }
 
             if (horizontalAxis <= -0.01)
             {
-                sideMovement = -0.2f;
+                sideMovement = -0.4f;
                 if (drifting == true)
                 {
-                    sideMovement = -0.5f;
+                    sideMovement = -1f;
                 }
                 transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y + (sideMovement * 2), transform.rotation.eulerAngles.z);
             }

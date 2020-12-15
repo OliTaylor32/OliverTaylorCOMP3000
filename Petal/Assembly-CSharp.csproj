@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Generic\Objects\LevelGate.cs" />
     <Compile Include="Assets\Scripts\Generic\Objects\RunStart.cs" />
     <Compile Include="Assets\Scripts\Generic\Objects\SkillRamp.cs" />
     <Compile Include="Assets\Scripts\Generic\Objects\Spikes.cs" />
@@ -708,6 +709,12 @@
     </Reference>
     <Reference Include="com.unity.multiplayer-hlapi.Runtime">
       <HintPath>D:/Final Year/OliverTaylorCOMP3000/Petal/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Postprocessing.Editor">
+      <HintPath>D:/Final Year/OliverTaylorCOMP3000/Petal/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Postprocessing.Runtime">
+      <HintPath>D:/Final Year/OliverTaylorCOMP3000/Petal/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>

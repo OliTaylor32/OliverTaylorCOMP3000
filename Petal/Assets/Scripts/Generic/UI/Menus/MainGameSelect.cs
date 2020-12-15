@@ -46,7 +46,7 @@ public class MainGameSelect : MonoBehaviour
         {
             if (newGame == true)
             {
-                //reformat save data, load start of new game
+                Application.LoadLevel("Solicia");
             }
             else
             {
