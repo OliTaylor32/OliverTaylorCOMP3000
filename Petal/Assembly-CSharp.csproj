@@ -674,6 +674,9 @@
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>D:/Final Year/OliverTaylorCOMP3000/Petal/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Postprocessing.Editor">
+      <HintPath>D:/Final Year/OliverTaylorCOMP3000/Petal/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="com.unity.multiplayer-weaver.Editor">
       <HintPath>D:/Final Year/OliverTaylorCOMP3000/Petal/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
     </Reference>
@@ -685,6 +688,9 @@
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
       <HintPath>D:/Final Year/OliverTaylorCOMP3000/Petal/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Postprocessing.Runtime">
+      <HintPath>D:/Final Year/OliverTaylorCOMP3000/Petal/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
       <HintPath>D:/Final Year/OliverTaylorCOMP3000/Petal/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
@@ -709,12 +715,6 @@
     </Reference>
     <Reference Include="com.unity.multiplayer-hlapi.Runtime">
       <HintPath>D:/Final Year/OliverTaylorCOMP3000/Petal/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Editor">
-      <HintPath>D:/Final Year/OliverTaylorCOMP3000/Petal/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Runtime">
-      <HintPath>D:/Final Year/OliverTaylorCOMP3000/Petal/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SkillRamp : MonoBehaviour
 {
+    public float height;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +23,7 @@ public class SkillRamp : MonoBehaviour
         if (other.gameObject.GetComponent<PlayerControl>() != null)
         {
             //print("Object is Player");
-            other.gameObject.GetComponent<PlayerControl>().SkillRamp();
+            other.gameObject.GetComponent<PlayerControl>().SkillRamp(height);
             //StartCoroutine(other.gameObject.GetComponent<RotationControl>().NewTarget());
         }
     }

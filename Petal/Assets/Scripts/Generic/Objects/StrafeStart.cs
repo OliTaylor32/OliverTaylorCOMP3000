@@ -7,6 +7,7 @@ public class StrafeStart : MonoBehaviour
     private float rotation;
     private float x;
     private float z;
+    public float stepDistance;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +28,7 @@ public class StrafeStart : MonoBehaviour
         if (other.gameObject.GetComponent<PlayerControl>() != null)
         {
             print("Object is Player");
-            other.gameObject.GetComponent<PlayerControl>().StrafeStart(rotation, x, z);
+            other.gameObject.GetComponent<PlayerControl>().StrafeStart(rotation, x, z, stepDistance);
             //StartCoroutine(other.gameObject.GetComponent<RotationControl>().NewTarget());
         }
     }

@@ -18,8 +18,8 @@ public class PlayerControl : MonoBehaviour
     private GameObject camera;
     private Rigidbody rigidbody;
     private CharacterController controller;
-    private float maxJump = 6f;
-    private float jumpSpeed = 0.4f;
+    private float maxJump = 13f;
+    private float jumpSpeed = 0.5f;
     private float gravity = 20f;
     private bool canTrick;
     private bool invincible;
@@ -39,6 +39,12 @@ public class PlayerControl : MonoBehaviour
     private bool drifting;
 
     //Hub amd Combat Variables
+
+    //Sidestep Variables
+    private bool xStep = true;
+    private int lane = 1;
+    private float stepDistance;
+    private bool canStep = true;
 
     //Input Variables
     float horizontalAxis;
@@ -170,24 +176,43 @@ public class PlayerControl : MonoBehaviour
             anim.SetBool("Run", true);
             anim.SetBool("Idle", false);
             acceleration = 0f;
-            camera.transform.localPosition = new Vector3(35, 10, 1);
-            camera.transform.localRotation = Quaternion.Euler(0f, 270f, 0f);
+            sideMovement = 0f;
 
-            if (horizontalAxis >= 0.01)
+            if (horizontalAxis >= 0.01 && lane != 2 && canStep == true)
             {
-                sideMovement = 0.5f;
+                canStep = false;
+                lane++;
+                if (xStep == true)
+                {
+                    transform.position = new Vector3(transform.position.x + stepDistance, transform.position.y, transform.position.z);
+                }
+                else
+                {
+                    transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + stepDistance);
+                }
+
                 print("Right");
             }
 
-            if (horizontalAxis <= -0.01)
+            if (horizontalAxis <= -0.01 && lane != 0 && canStep == true)
             {
-                sideMovement = -0.5f;
+                canStep = false;
+                lane--;
+                if (xStep == true)
+                {
+                    transform.position = new Vector3(transform.position.x - stepDistance, transform.position.y, transform.position.z);
+                }
+                else
+                {
+                    transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - stepDistance);
+                }
+
                 print("Left");
             }
 
             if (horizontalAxis < 0.01 && horizontalAxis > -0.01)
             {
-                sideMovement = 0f;
+                canStep = true;
             }
 
             speed = speed + acceleration;
@@ -436,11 +461,15 @@ public class PlayerControl : MonoBehaviour
     private IEnumerator Jump()
     {
         float height = 0;
-
+        float i = 1;
         while(Input.GetButton("Jump") && height < maxJump)
         {
             jumping = true;
-            transform.position = new Vector3(transform.position.x, transform.position.y + jumpSpeed, transform.position.z);
+            transform.position = new Vector3(transform.position.x, transform.position.y + (jumpSpeed * i), transform.position.z);
+            if (i > 0.1f)
+            {
+                i = i - 0.05f;
+            }
             yield return new WaitForSeconds(0.01f);
             height = height + jumpSpeed;
         }
@@ -448,36 +477,56 @@ public class PlayerControl : MonoBehaviour
 
     }
 
-    public void SkillRamp()
+    public void SkillRamp(float height)
     {
         print("Skill ramp script start");
         acceleration = maxSpeed;
         jumping = true;
-        StartCoroutine(SkillRampStart());
+        StartCoroutine(SkillRampStart(height));
     }
 
-    private IEnumerator SkillRampStart()
+    private IEnumerator SkillRampStart(float height)
     {
+        controlType = 1;
         float i = 0;
-        while (i < 25f)
+        while (i < height)
         {
             canTrick = true;
             acceleration = maxSpeed;
-            speed = maxSpeed;
-            transform.position = new Vector3(transform.position.x, transform.position.y + (1.2f), transform.position.z);
+            speed = maxSpeed / 2;
+            transform.position = new Vector3(transform.position.x, transform.position.y + (0.5f), transform.position.z);
             yield return new WaitForSeconds(0.01f);
-            i = i + 1.2f;
+            i = i + 0.5f;
         }
 
         jumping = false;
+        controlType = 0;
     }
 
-    public void StrafeStart(float rotation, float x, float z)
+    public void StrafeStart(float rotation, float x, float z, float distance)
     {
         controlType = 1;
+        stepDistance = distance;
         speed = maxSpeed;
         player.transform.rotation = Quaternion.Euler(player.transform.rotation.eulerAngles.x, rotation, player.transform.rotation.eulerAngles.z);
         player.transform.position = new Vector3(x, player.transform.position.y, z);
+        lane = 1;
+        if (rotation == 0)
+        {
+            xStep = false;
+        }
+        if (rotation == 90)
+        {
+            xStep = true;
+        }
+        if (rotation == 180)
+        {
+            xStep = false;
+        }
+        if (rotation == 90)
+        {
+            xStep = true;
+        }
     }
 
     public void RunStart(float rotation)
