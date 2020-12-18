@@ -39,6 +39,7 @@ public class PlayerControl : MonoBehaviour
     private bool drifting;
 
     //Hub amd Combat Variables
+    public GameObject attackRange;
 
     //Sidestep Variables
     private bool xStep = true;
@@ -285,6 +286,24 @@ public class PlayerControl : MonoBehaviour
                 speed = 1;
                 playerModel.transform.LookAt(transform.forward);
                 //playerModel.transform.Rotate(0, 90, 0);
+            }
+
+            if (Input.GetAxisRaw("Attack") == 1)
+            {
+                controlType = 4;
+                print("Button pressed");
+                //if the Attackrange has an object in its collision, get the character to display the text, set control type to 4
+                if (attackRange.GetComponent<AttackRange>().interactable != null)
+                {
+                    attackRange.GetComponent<AttackRange>().Interact();
+                    print("Interact called");
+                    anim.SetBool("Idle", true);
+                    anim.SetBool("Run", false);
+                }
+                else
+                {
+                    controlType = 3;
+                }
             }
         }
 
@@ -592,6 +611,12 @@ public class PlayerControl : MonoBehaviour
         invincible = true;
         yield return new WaitForSeconds(1);
         invincible = false;
+    }
+
+    public IEnumerator EndInteraction()
+    {
+        yield return new WaitForSeconds(0.2f);
+        controlType = 3;
     }
 
 }

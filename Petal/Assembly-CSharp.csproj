@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Generic\NPC's\BasicNPC.cs" />
     <Compile Include="Assets\Scripts\Generic\Objects\LevelGate.cs" />
     <Compile Include="Assets\Scripts\Generic\Objects\RunStart.cs" />
     <Compile Include="Assets\Scripts\Generic\Objects\SkillRamp.cs" />
@@ -69,6 +70,7 @@
     <Compile Include="Assets\Scripts\Generic\Objects\StrafeStart.cs" />
     <Compile Include="Assets\Scripts\Generic\Objects\SunEnergy.cs" />
     <Compile Include="Assets\Scripts\Generic\Objects\WoodCrate.cs" />
+    <Compile Include="Assets\Scripts\Generic\Player\AttackRange.cs" />
     <Compile Include="Assets\Scripts\Generic\Player\CameraZones.cs" />
     <Compile Include="Assets\Scripts\Generic\Player\PlayerControl.cs" />
     <Compile Include="Assets\Scripts\Generic\Player\RotationControl.cs" />
