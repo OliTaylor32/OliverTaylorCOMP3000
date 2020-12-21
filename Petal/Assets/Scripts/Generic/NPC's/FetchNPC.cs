@@ -61,6 +61,10 @@ public class FetchNPC : MonoBehaviour
                     if (i >= task.Length)
                     {
                         questItem.SetActive(true);
+                        if (questItem.GetComponent<TaskNPC>() != null)
+                        {
+                            questItem.GetComponent<TaskNPC>().taskStarted = true;
+                        }
                         EndInteraction();
                     }
                     axisFree = false;
