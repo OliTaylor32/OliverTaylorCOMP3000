@@ -40,6 +40,8 @@ public class PlayerControl : MonoBehaviour
 
     //Hub amd Combat Variables
     public GameObject attackRange;
+    private bool attacking;
+    private int power;
 
     //Sidestep Variables
     private bool xStep = true;
@@ -61,6 +63,8 @@ public class PlayerControl : MonoBehaviour
         stomping = false;
         invincible = false;
         drifting = false;
+        attacking = false;
+        power = 1;
 
         camera = GameObject.Find("Main Camera");
         controller = GetComponent<CharacterController>();
@@ -101,7 +105,7 @@ public class PlayerControl : MonoBehaviour
                 anim.SetBool("Run", false);
             }
 
-            if (horizontalAxis >= 0.01)
+            if (horizontalAxis >= 0.1)
             {
                 sideMovement = 0.4f;
                 if (drifting == true)
@@ -111,7 +115,7 @@ public class PlayerControl : MonoBehaviour
                 transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y + (sideMovement * 2), transform.rotation.eulerAngles.z);
             }
 
-            if (horizontalAxis <= -0.01)
+            if (horizontalAxis <= -0.1)
             {
                 sideMovement = -0.4f;
                 if (drifting == true)
@@ -159,6 +163,12 @@ public class PlayerControl : MonoBehaviour
             if (stomping == true && controller.isGrounded == true)
             {
                 stomping = false;
+            }
+
+            if (Input.GetButton("Attack"))
+            {
+                attackRange.GetComponent<AttackRange>().Attack(power);
+                attacking = true;
             }
 
             Vector3 movement = new Vector3(sideMovement, 0, speed);
@@ -228,6 +238,12 @@ public class PlayerControl : MonoBehaviour
             else
             {
                 boosting = false;
+            }
+
+            if (Input.GetButton("Attack"))
+            {
+                attackRange.GetComponent<AttackRange>().Attack(power);
+                attacking = true;
             }
 
             Vector3 movement = new Vector3(0, 0, speed);
@@ -572,31 +588,23 @@ public class PlayerControl : MonoBehaviour
             }
             
         }
+        else if (hit.gameObject.GetComponent<EnemyHealth>() != null)
+        {
+            if (boosting == true)
+            {
+                hit.gameObject.GetComponent<EnemyHealth>().Attacked(power);
+            }
+            else
+            {
+                Damaged();
+            }
+        }
 
         if (hit.gameObject.GetComponent<Spikes>() != null)
         {
             if (hit.gameObject.GetComponent<Spikes>().active == true)
             {
-                if (controlType == 0 && invincible == false)
-                {
-                    acceleration = 0;
-                    speed = 0;
-                    Vector3 movement = new Vector3(0, 0, -6);
-                    movement = camera.transform.rotation * movement;
-                    player.GetComponent<CharacterController>().Move(movement);
-                }
-                if (controlType == 1)
-                {
-                    Vector3 movement = new Vector3(0, 0, 3);
-                    movement = camera.transform.rotation * movement;
-                    player.GetComponent<CharacterController>().Move(movement);
-                }
-
-                if (invincible == false)
-                {
-                    life = life - 1;
-                    StartCoroutine(invincibility());
-                }
+                Damaged();
             }
         }
 
@@ -617,6 +625,30 @@ public class PlayerControl : MonoBehaviour
     {
         yield return new WaitForSeconds(0.2f);
         controlType = 3;
+    }
+
+    public void Damaged()
+    {
+        if (controlType == 0 && invincible == false)
+        {
+            acceleration = 0;
+            speed = 0;
+            Vector3 movement = new Vector3(0, 0, -6);
+            movement = camera.transform.rotation * movement;
+            player.GetComponent<CharacterController>().Move(movement);
+        }
+        if (controlType == 1)
+        {
+            Vector3 movement = new Vector3(0, 0, 3);
+            movement = camera.transform.rotation * movement;
+            player.GetComponent<CharacterController>().Move(movement);
+        }
+
+        if (invincible == false)
+        {
+            life = life - 1;
+            StartCoroutine(invincibility());
+        }
     }
 
 }

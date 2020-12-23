@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Generic\Enemies\EnemyHealth.cs" />
     <Compile Include="Assets\Scripts\Generic\NPC's\BasicNPC.cs" />
     <Compile Include="Assets\Scripts\Generic\NPC's\FetchItem.cs" />
     <Compile Include="Assets\Scripts\Generic\NPC's\FetchNPC.cs" />
