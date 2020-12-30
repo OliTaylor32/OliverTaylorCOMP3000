@@ -178,6 +178,14 @@ public class PlayerControl : MonoBehaviour
 
         }
 
+
+
+
+
+
+
+
+
         if (controlType == 1)
         {
             camera.transform.parent = transform;
@@ -256,24 +264,33 @@ public class PlayerControl : MonoBehaviour
 
         }
 
+
+
+
+
+
+
+
+
+
+
+
+
         Vector3 dir;
         Vector3 oldPos;
         if (controlType == 2)
         {
+            Vector3 prevPos = transform.position;
+            float fixX = transform.rotation.x;
+            float fixZ = transform.rotation.z;
             //Camera is in fixed position, points towards player
             //Movement dependant on camera
             //Speed max speed is halfed. 
             //No boosting
             camera.transform.parent = null;
             camera.transform.LookAt(gameObject.transform);
-
-            oldPos = transform.position;
-            dir = camera.transform.right * horizontalAxis;
-            dir.Normalize();
-            player.GetComponent<CharacterController>().Move(dir * (maxSpeed / 4) * Time.deltaTime);
-            dir = camera.transform.forward * verticalAxis;
-            dir.Normalize();
-            player.GetComponent<CharacterController>().Move(dir * (maxSpeed / 4) * Time.deltaTime);
+            Vector3 move = camera.transform.forward * verticalAxis + camera.transform.right * horizontalAxis;
+            controller.Move((maxSpeed / 4) * Time.deltaTime * move);
             if (verticalAxis == 0 && horizontalAxis == 0)
             {
                 speed = 0;
@@ -281,10 +298,30 @@ public class PlayerControl : MonoBehaviour
             else
             {
                 speed = 1;
-                player.transform.LookAt((transform.position - oldPos) + transform.position);
-                player.transform.Rotate(0, 90, 0);
+                if (verticalAxis < 0)
+                {
+                    transform.right = (prevPos - transform.position).normalized;
+                    //transform.right = new Vector3(fixX, transform.rotation.y, fixZ).normalized;
+                }
+                else
+                    transform.right = (transform.position - prevPos).normalized * -1f;
+                //playerModel.transform.Rotate(0, 90, 0);
+            }
+
+            if (Input.GetAxisRaw("Attack") == 1)
+            {
+                //Attacks
             }
         }
+
+
+
+
+
+
+
+
+
         if (controlType == 3)
         {
             oldPos = transform.position;
