@@ -310,7 +310,16 @@ public class PlayerControl : MonoBehaviour
 
             if (Input.GetAxisRaw("Attack") == 1)
             {
-                //Attacks
+                print("Light Attack");
+                //Start a courintine in which it checks if the player starts a combo (Only if this attack actually hits anything.)
+                //This method should give the player 1 sec to perform a valid follow up move
+                //During that one secound it should note whether the player stoped pressing the buton
+                //After which, a new button press would be valid. After a new valid combo attack, the timer is reset and it repeats.
+                //If the player doesn't press a button, holds the button down, or performs an invalid attack, the method breaks.
+                //If an invalid combo move was inputed, it will count as a normal attack, but not the start of a combo. 
+                //If a combo is fully completed with no follow-ups avaliable, the method breaks. 
+                //If an attack doesn't connect with an enemy, the method breaks.
+                //If the player loses health, the method breaks. 
             }
         }
 

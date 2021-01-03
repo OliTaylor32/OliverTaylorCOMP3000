@@ -5,6 +5,7 @@ using UnityEngine;
 public class AttackRange : MonoBehaviour
 {
     public GameObject attackable;
+    public GameObject destroyable;
     public GameObject interactable;
     private int interactableType; // 0 = Basic 1 = fetch 2 = stage 3 = Task
     // Start is called before the first frame update
@@ -54,6 +55,12 @@ public class AttackRange : MonoBehaviour
             print("Enemy In range");
             attackable = other.gameObject;
         }
+
+        if (other.gameObject.GetComponent<WoodCrate>() != null)
+        {
+            print("Crate In Range");
+            destroyable = other.gameObject;
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -65,6 +72,10 @@ public class AttackRange : MonoBehaviour
         else if (other.gameObject == attackable)
         {
             attackable = null;
+        }
+        else if (other.gameObject == destroyable)
+        {
+            destroyable = null;
         }
     }
 
@@ -98,6 +109,11 @@ public class AttackRange : MonoBehaviour
         if (attackable != null)
         {
             attackable.GetComponent<EnemyHealth>().Attacked(power);
+        }
+
+        if (destroyable != null)
+        {
+            destroyable.GetComponent<WoodCrate>().Contact();
         }
     }
 }
