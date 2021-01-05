@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\Generic\NPC's\StageNPC.cs" />
     <Compile Include="Assets\Scripts\Generic\NPC's\SubGate.cs" />
     <Compile Include="Assets\Scripts\Generic\NPC's\TaskNPC.cs" />
+    <Compile Include="Assets\Scripts\Generic\Objects\CombatStart.cs" />
     <Compile Include="Assets\Scripts\Generic\Objects\LevelGate.cs" />
     <Compile Include="Assets\Scripts\Generic\Objects\RunStart.cs" />
     <Compile Include="Assets\Scripts\Generic\Objects\SkillRamp.cs" />

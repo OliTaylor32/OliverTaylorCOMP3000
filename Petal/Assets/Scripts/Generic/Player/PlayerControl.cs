@@ -308,9 +308,10 @@ public class PlayerControl : MonoBehaviour
                 //playerModel.transform.Rotate(0, 90, 0);
             }
 
-            if (Input.GetAxisRaw("Attack") == 1)
+            if (Input.GetButton("Attack"))
             {
-                print("Light Attack");
+                attackRange.GetComponent<AttackRange>().Attack(power);
+                attacking = true;
                 //Start a courintine in which it checks if the player starts a combo (Only if this attack actually hits anything.)
                 //This method should give the player 1 sec to perform a valid follow up move
                 //During that one secound it should note whether the player stoped pressing the buton
@@ -603,10 +604,12 @@ public class PlayerControl : MonoBehaviour
         if (rotation == 180)
         {
             xStep = false;
+            stepDistance = -distance;
         }
-        if (rotation == 90)
+        if (rotation == -90)
         {
             xStep = true;
+            stepDistance = -distance;
         }
     }
 
@@ -614,7 +617,21 @@ public class PlayerControl : MonoBehaviour
     {
         controlType = 0;
         speed = maxSpeed;
-        player.transform.rotation = Quaternion.Euler(player.transform.rotation.eulerAngles.x, rotation, player.transform.rotation.eulerAngles.z);
+        player.transform.rotation = Quaternion.Euler(0, rotation, 0);
+    }
+
+    public void CombatStart(Vector3 newCameraPos)
+    {
+        Vector3 movement = new Vector3(0, 0, maxSpeed);
+        for (int i = 0; i < 3; i++)
+        {
+            player.GetComponent<CharacterController>().Move(movement * Time.deltaTime);
+        }
+        camera.transform.parent = null;
+        camera.transform.LookAt(gameObject.transform);
+
+        camera.transform.position = newCameraPos;
+        controlType = 2;
     }
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
