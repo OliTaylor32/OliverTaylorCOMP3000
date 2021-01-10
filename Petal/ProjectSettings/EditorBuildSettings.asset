@@ -30,9 +30,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Menus/Extras.unity
     guid: 1ed610bafb4b9df4ca29c8bd63e74545
   - enabled: 1
+    path: Assets/Scenes/Levels/Tutorial.unity
+    guid: 65993eacac5221e418b9f258e4bea342
+  - enabled: 1
     path: Assets/Scenes/Levels/HubWorlds/Solicia/Solicia.unity
     guid: 0f2a55d561ed6c340950e7925aee4939
   - enabled: 1
     path: Assets/Scenes/Levels/MainStages/SoliciaMain.unity
     guid: 111befdcf9ff83d48823a14fff32f2ae
+  - enabled: 1
+    path: Assets/Scenes/Levels/HubWorlds/Solicia/Solicia2.unity
+    guid: 8e6b0d564dbf1cd40a8aad81e608de1a
   m_configObjects: {}

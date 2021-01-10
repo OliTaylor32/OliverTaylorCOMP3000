@@ -35,7 +35,7 @@ public class SubGate : MonoBehaviour
     {
         if (other.GetComponent<PlayerControl>() != null)
         {
-            Application.LoadLevel(level.name);
+            Application.LoadLevel(level.handle);
         }
     }
 

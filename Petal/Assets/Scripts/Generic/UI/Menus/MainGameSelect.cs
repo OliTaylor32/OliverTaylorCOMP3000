@@ -46,7 +46,7 @@ public class MainGameSelect : MonoBehaviour
         {
             if (newGame == true)
             {
-                Application.LoadLevel("Solicia");
+                Application.LoadLevel("Tutorial");
             }
             else
             {
