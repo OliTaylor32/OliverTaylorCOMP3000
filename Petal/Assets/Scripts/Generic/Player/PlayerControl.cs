@@ -17,6 +17,7 @@ public class PlayerControl : MonoBehaviour
     public float maxSpeed = 50f;
     private GameObject camera;
     private Rigidbody rigidbody;
+    public IsGrounded isGrounded;
     private CharacterController controller;
     private float maxJump = 13f;
     private float jumpSpeed = 0.5f;
@@ -136,7 +137,7 @@ public class PlayerControl : MonoBehaviour
             ////////////
             //Boosting//
             ////////////
-            if (Input.GetButton("Boost") && controller.isGrounded && boost > 0)
+            if (Input.GetButton("Boost") && isGrounded.isGrounded() == true && boost > 0)
             {
                 speed = boostSpeed;
                 boost--;
@@ -237,7 +238,7 @@ public class PlayerControl : MonoBehaviour
             speed = speed + acceleration;
             speed = Mathf.Clamp(speed, 0, maxSpeed);
 
-            if (Input.GetButton("Boost") && controller.isGrounded && boost > 0)
+            if (Input.GetButton("Boost") && isGrounded.isGrounded() == true && boost > 0)
             {
                 speed = boostSpeed;
                 boost--;
@@ -401,7 +402,7 @@ public class PlayerControl : MonoBehaviour
             /////////////
             ///Jumping///
             /////////////
-            if (Input.GetButton("Jump") && jumping == false && controller.isGrounded == true)
+            if (Input.GetButton("Jump") && jumping == false && isGrounded.isGrounded() == true)
             {
                 jumping = true;
                 print("Jump");
@@ -412,13 +413,13 @@ public class PlayerControl : MonoBehaviour
             /////////////
             ///Gravity///
             /////////////
-            if (controller.isGrounded)
+            if (isGrounded.isGrounded() == true)
             {
                 jumping = false;
                 canTrick = false;
             }
 
-            if (controller.isGrounded == false && jumping == false)
+            if (isGrounded.isGrounded() == false && jumping == false)
             {
                 Vector3 grav = new Vector3(0, gravity, 0);
                 player.GetComponent<CharacterController>().Move(-(grav * Time.deltaTime));
@@ -427,7 +428,7 @@ public class PlayerControl : MonoBehaviour
             //////////////
             ///Drifting///
             //////////////
-            if (Input.GetButton("Drift") && controller.isGrounded == true)
+            if (Input.GetButton("Drift") && isGrounded.isGrounded() == true)
             {
                 drifting = true;
             }

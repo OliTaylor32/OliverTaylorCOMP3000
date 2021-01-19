@@ -80,6 +80,7 @@
     <Compile Include="Assets\Scripts\Generic\Objects\WoodCrate.cs" />
     <Compile Include="Assets\Scripts\Generic\Player\AttackRange.cs" />
     <Compile Include="Assets\Scripts\Generic\Player\CameraZones.cs" />
+    <Compile Include="Assets\Scripts\Generic\Player\IsGrounded.cs" />
     <Compile Include="Assets\Scripts\Generic\Player\PlayerControl.cs" />
     <Compile Include="Assets\Scripts\Generic\Player\RotationControl.cs" />
     <Compile Include="Assets\Scripts\Generic\PlayerData\MainGameData.cs" />
