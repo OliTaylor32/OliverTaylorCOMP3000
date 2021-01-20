@@ -8,6 +8,7 @@ public class EnemyHealth : MonoBehaviour
     public Scoring scoring;
     public PlayerControl player;
     public int points;
+    public bool shield;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,8 +26,15 @@ public class EnemyHealth : MonoBehaviour
         }   
     }
 
-    public void Attacked(int damage)
+    public void Attacked(int damage, bool heavy)
     {
-        health = health - damage;
+        if (heavy == true)
+        {
+            shield = false;
+        }
+        if (shield == false)
+        {
+            health = health - damage;
+        }
     }
 }

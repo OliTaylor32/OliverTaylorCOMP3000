@@ -168,7 +168,7 @@ public class PlayerControl : MonoBehaviour
 
             if (Input.GetButton("Attack"))
             {
-                attackRange.GetComponent<AttackRange>().Attack(power);
+                attackRange.GetComponent<AttackRange>().Attack(power, false);
                 attacking = true;
             }
 
@@ -251,7 +251,7 @@ public class PlayerControl : MonoBehaviour
 
             if (Input.GetButton("Attack"))
             {
-                attackRange.GetComponent<AttackRange>().Attack(power);
+                attackRange.GetComponent<AttackRange>().Attack(power, false);
                 attacking = true;
             }
 
@@ -311,7 +311,7 @@ public class PlayerControl : MonoBehaviour
 
             if (Input.GetButton("Attack"))
             {
-                attackRange.GetComponent<AttackRange>().Attack(power);
+                attackRange.GetComponent<AttackRange>().Attack(power, false);
                 attacking = true;
                 //Start a courintine in which it checks if the player starts a combo (Only if this attack actually hits anything.)
                 //This method should give the player 1 sec to perform a valid follow up move
@@ -322,6 +322,12 @@ public class PlayerControl : MonoBehaviour
                 //If a combo is fully completed with no follow-ups avaliable, the method breaks. 
                 //If an attack doesn't connect with an enemy, the method breaks.
                 //If the player loses health, the method breaks. 
+            }
+
+            if (Input.GetButton("Boost"))
+            {
+                attackRange.GetComponent<AttackRange>().Attack((power*2), true);
+                attacking = true;
             }
         }
 
@@ -656,7 +662,7 @@ public class PlayerControl : MonoBehaviour
         {
             if (boosting == true)
             {
-                hit.gameObject.GetComponent<EnemyHealth>().Attacked(power);
+                hit.gameObject.GetComponent<EnemyHealth>().Attacked(power, false);
             }
             else
             {

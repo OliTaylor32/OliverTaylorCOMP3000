@@ -104,11 +104,11 @@ public class AttackRange : MonoBehaviour
         }
     }
 
-    public void Attack(int power)
+    public void Attack(int power, bool heavy)
     {
         if (attackable != null)
         {
-            attackable.GetComponent<EnemyHealth>().Attacked(power);
+            attackable.GetComponent<EnemyHealth>().Attacked(power, heavy);
         }
 
         if (destroyable != null)
