@@ -682,6 +682,11 @@ public class PlayerControl : MonoBehaviour
         {
             Application.LoadLevel(Application.loadedLevel);
         }
+
+        if (hit.gameObject.name == "Button")
+        {
+            hit.gameObject.GetComponentInParent<Button>().Contact();
+        }
     }
 
     private IEnumerator invincibility()
