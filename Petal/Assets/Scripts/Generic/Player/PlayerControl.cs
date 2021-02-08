@@ -49,6 +49,7 @@ public class PlayerControl : MonoBehaviour
     private int lane = 1;
     private float stepDistance;
     private bool canStep = true;
+    private bool reverse;
 
     //Input Variables
     float horizontalAxis;
@@ -190,15 +191,22 @@ public class PlayerControl : MonoBehaviour
         if (controlType == 1)
         {
             camera.transform.parent = transform;
-            camera.transform.localPosition = new Vector3(35, 10, 1);
-            camera.transform.localRotation = Quaternion.Euler(0f, 270f, 0f);
-
+            if (reverse == false)
+            {
+                camera.transform.localPosition = new Vector3(35, 10, 1);
+                camera.transform.localRotation = Quaternion.Euler(0f, 270f, 0f);
+            }
+            else
+            {
+                camera.transform.localPosition = new Vector3(-50, 10, 1);
+                camera.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
+            }
             anim.SetBool("Run", true);
             anim.SetBool("Idle", false);
             acceleration = 0f;
             sideMovement = 0f;
 
-            if (horizontalAxis >= 0.01 && lane != 2 && canStep == true)
+            if (horizontalAxis >= 0.01 && lane != 2 && canStep == true && reverse == false || horizontalAxis <= -0.01 && lane != 2 && canStep == true && reverse == true)
             {
                 canStep = false;
                 lane++;
@@ -214,7 +222,7 @@ public class PlayerControl : MonoBehaviour
                 print("Right");
             }
 
-            if (horizontalAxis <= -0.01 && lane != 0 && canStep == true)
+            if (horizontalAxis <= -0.01 && lane != 0 && canStep == true && reverse == false|| horizontalAxis >= 0.01 && lane != 0 && canStep == true && reverse == true)
             {
                 canStep = false;
                 lane--;
@@ -254,12 +262,25 @@ public class PlayerControl : MonoBehaviour
                 attackRange.GetComponent<AttackRange>().Attack(power, false);
                 attacking = true;
             }
-
-            Vector3 movement = new Vector3(0, 0, speed);
+            Vector3 movement;
+            if (reverse == false)
+            {
+                movement = new Vector3(0, 0, speed);
+            }
+            else
+            {
+                movement = new Vector3(0, 0, -speed);
+            }
             movement = camera.transform.rotation * movement;
             player.GetComponent<CharacterController>().Move(movement * Time.deltaTime);
-
-            movement = new Vector3(sideMovement, 0, 0);
+            if (reverse == false)
+            {
+                movement = new Vector3(sideMovement, 0, 0);
+            }
+            else
+            {
+                movement = new Vector3(-sideMovement, 0, 0);
+            }
             movement = camera.transform.rotation * movement;
             player.GetComponent<CharacterController>().Move(movement);
 
@@ -592,8 +613,9 @@ public class PlayerControl : MonoBehaviour
         controlType = 0;
     }
 
-    public void StrafeStart(float rotation, float x, float z, float distance)
+    public void StrafeStart(float rotation, float x, float z, float distance, bool reverse)
     {
+        this.reverse = reverse;
         controlType = 1;
         stepDistance = distance;
         speed = maxSpeed;
