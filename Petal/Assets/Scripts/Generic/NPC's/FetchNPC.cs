@@ -18,6 +18,8 @@ public class FetchNPC : MonoBehaviour
     private bool axisFree;
     private bool started;
     private int i;
+    public Money money;
+    public int goldAmount;
 
 
     // Start is called before the first frame update
@@ -45,6 +47,7 @@ public class FetchNPC : MonoBehaviour
                     i++;
                     if (i >= thankyou.Length)
                     {
+                        money.ChangeMoney(goldAmount);
                         EndInteraction();
                     }
                     axisFree = false;

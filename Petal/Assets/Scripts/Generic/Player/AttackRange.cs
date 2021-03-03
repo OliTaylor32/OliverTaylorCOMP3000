@@ -7,7 +7,7 @@ public class AttackRange : MonoBehaviour
     public GameObject attackable;
     public GameObject destroyable;
     public GameObject interactable;
-    private int interactableType; // 0 = Basic 1 = fetch 2 = stage 3 = Task
+    private int interactableType; // 0 = Basic 1 = fetch 2 = stage 3 = Task 4 = Chest
     // Start is called before the first frame update
     void Start()
     {
@@ -61,7 +61,13 @@ public class AttackRange : MonoBehaviour
             print("Crate In Range");
             destroyable = other.gameObject;
         }
-    }
+        if (other.gameObject.GetComponent<Chest>() != null)
+        {
+            print("Chest in range");
+            interactable = other.gameObject;
+            interactableType = 4;
+        }
+        }
 
     private void OnTriggerExit(Collider other)
     {
@@ -101,6 +107,12 @@ public class AttackRange : MonoBehaviour
         {
             print("Start Interaction");
             interactable.GetComponent<TaskNPC>().StartInteraction();
+        }
+
+        if (interactableType == 4)
+        {
+            print("Start Interaction");
+            interactable.GetComponent<Chest>().StartInteraction();
         }
     }
 

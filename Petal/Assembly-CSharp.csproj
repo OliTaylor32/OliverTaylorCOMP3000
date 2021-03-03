@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\Generic\NPC's\SubGate.cs" />
     <Compile Include="Assets\Scripts\Generic\NPC's\TaskNPC.cs" />
     <Compile Include="Assets\Scripts\Generic\Objects\Button.cs" />
+    <Compile Include="Assets\Scripts\Generic\Objects\Chest.cs" />
     <Compile Include="Assets\Scripts\Generic\Objects\CombatStart.cs" />
     <Compile Include="Assets\Scripts\Generic\Objects\FinishLine.cs" />
     <Compile Include="Assets\Scripts\Generic\Objects\LevelChange.cs" />
@@ -83,6 +84,7 @@
     <Compile Include="Assets\Scripts\Generic\Player\AttackRange.cs" />
     <Compile Include="Assets\Scripts\Generic\Player\CameraZones.cs" />
     <Compile Include="Assets\Scripts\Generic\Player\IsGrounded.cs" />
+    <Compile Include="Assets\Scripts\Generic\Player\Money.cs" />
     <Compile Include="Assets\Scripts\Generic\Player\PlayerControl.cs" />
     <Compile Include="Assets\Scripts\Generic\Player\RotationControl.cs" />
     <Compile Include="Assets\Scripts\Generic\PlayerData\MainGameData.cs" />
