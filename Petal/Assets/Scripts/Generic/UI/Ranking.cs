@@ -11,6 +11,10 @@ public class Ranking : MonoBehaviour
     public Scoring score;
 
     public Sprite a, b, c;
+
+    public SaveControl save;
+
+    public string stage;
     
     // Start is called before the first frame update
     void Start()
@@ -53,5 +57,21 @@ public class Ranking : MonoBehaviour
             GetComponent<Image>().sprite = c;
         }
         GetComponent<Image>().enabled = true;
+
+        switch (stage)
+        {
+            case "SoliciaMain":
+                if (save.solicia1 < rank + 1)
+                {
+                    save.gold = save.gold + (((rank + 1) - save.solicia1) * 100);
+                    save.solicia1 = rank + 1;
+                }
+                break;
+
+            default:
+                break;
+        }
+        save.Save();
     }
+
 }

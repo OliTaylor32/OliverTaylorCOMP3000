@@ -87,7 +87,10 @@
     <Compile Include="Assets\Scripts\Generic\Player\Money.cs" />
     <Compile Include="Assets\Scripts\Generic\Player\PlayerControl.cs" />
     <Compile Include="Assets\Scripts\Generic\Player\RotationControl.cs" />
+    <Compile Include="Assets\Scripts\Generic\PlayerData\ContinueDataDisplay.cs" />
+    <Compile Include="Assets\Scripts\Generic\PlayerData\LastAreaTrack.cs" />
     <Compile Include="Assets\Scripts\Generic\PlayerData\MainGameData.cs" />
+    <Compile Include="Assets\Scripts\Generic\PlayerData\SaveControl.cs" />
     <Compile Include="Assets\Scripts\Generic\UI\BoostSlider.cs" />
     <Compile Include="Assets\Scripts\Generic\UI\LevelSelect.cs" />
     <Compile Include="Assets\Scripts\Generic\UI\LifeMeter.cs" />

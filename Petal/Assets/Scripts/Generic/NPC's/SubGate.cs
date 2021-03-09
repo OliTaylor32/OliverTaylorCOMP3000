@@ -9,10 +9,19 @@ public class SubGate : MonoBehaviour
     public Material closedGate;
     public Material openGate;
     public Scene level;
+    public string location;
+    public SaveControl save;
     // Start is called before the first frame update
     void Start()
     {
-        
+        save.Load();
+        if (location == "Solicia")
+        {
+            if (save.solicia2 > -1)
+            {
+                Activate();
+            }
+        }
     }
 
     // Update is called once per frame
@@ -35,13 +44,22 @@ public class SubGate : MonoBehaviour
     {
         if (other.GetComponent<PlayerControl>() != null)
         {
+            save.Save();
             Application.LoadLevel(level.handle);
         }
     }
 
     public void Activate()
     {
+        if (location == "Solicia")
+        {
+            if (save.solicia2 < 0)
+            {
+                save.solicia2 = 0;
+            }
+        }
         open = true;
+        save.Save();
     }
 
 

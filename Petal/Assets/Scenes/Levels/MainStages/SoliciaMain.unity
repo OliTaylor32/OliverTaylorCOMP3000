@@ -72,7 +72,7 @@ LightmapSettings:
     m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
-    m_BakeBackend: 1
+    m_BakeBackend: 2
     m_PVRSampling: 1
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 512
@@ -97,7 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 743c157d3d722b94d878f2e3b0ec0c60,
+    type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -5834,6 +5835,11 @@ PrefabInstance:
       propertyPath: scoreGoal
       value: 800
       objectReference: {fileID: 0}
+    - target: {fileID: 5061985926782488801, guid: 1f5d37c50eb2e284f9ee94f324ca385b,
+        type: 3}
+      propertyPath: save
+      value: 
+      objectReference: {fileID: 147250590}
     - target: {fileID: 6897295098491292043, guid: 1f5d37c50eb2e284f9ee94f324ca385b,
         type: 3}
       propertyPath: m_Enabled
@@ -5847,12 +5853,50 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 147250587}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 147250589}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c5ec713560736e469f2a8ab9de17adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &147250589 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2563178466977282758, guid: 1f5d37c50eb2e284f9ee94f324ca385b,
+    type: 3}
+  m_PrefabInstance: {fileID: 147250587}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &147250590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147250589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 803ea352d900b1e45989acc8131686f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gold: 0
+  speedXP: 0
+  attackXP: 0
+  boostXP: 0
+  lastArea: 0
+  speedLvl: 0
+  attackLvl: 0
+  boostLvl: 0
+  headwear: 0
+  costume: 0
+  gloves: 0
+  shoes: 0
+  solicia1: 0
+  solicia2: -1
+  sQuest1: 0
+  sQuest2: 0
+  sChest1: 0
+  sChest2: 0
+  sChest3: 0
+  sChest4: 0
 --- !u!1001 &160987908
 PrefabInstance:
   m_ObjectHideFlags: 0

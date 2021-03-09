@@ -7,6 +7,7 @@ public class MainGameSelect : MonoBehaviour
     public bool newGame;
     public GameObject newGameSelect;
     public GameObject continueSelect;
+    public SaveControl save;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,10 +48,22 @@ public class MainGameSelect : MonoBehaviour
             if (newGame == true)
             {
                 Application.LoadLevel("Tutorial");
+                save.ResetData();
             }
             else
             {
-                //Load save data, load player to hub of last place docked.
+                switch (save.lastArea)
+                {
+                    case 0:
+                        Application.LoadLevel("Solicia");
+                        break;
+                    case 1:
+                        Application.LoadLevel("Solicia2");
+                        break;
+                    default:
+                        Application.LoadLevel("Tutorial");
+                        break;
+                }
             }
         }
     }

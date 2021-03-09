@@ -336,6 +336,8 @@ MonoBehaviour:
   openGate: {fileID: 2100000, guid: b6b627301ea8f9b4fa3d7d51ab5be5d7, type: 2}
   level:
     m_Handle: 0
+  location: Solicia
+  save: {fileID: 752606730}
 --- !u!54 &103478385
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1193,6 +1195,9 @@ MonoBehaviour:
   item: 
   money: {fileID: 1113696949}
   player: {fileID: 1274776888}
+  save: {fileID: 752606730}
+  area: Solicia
+  number: 1
 --- !u!65 &298116293
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2738,6 +2743,8 @@ GameObject:
   - component: {fileID: 752606728}
   - component: {fileID: 752606727}
   - component: {fileID: 752606726}
+  - component: {fileID: 752606730}
+  - component: {fileID: 752606731}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2827,6 +2834,51 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &752606730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752606725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 803ea352d900b1e45989acc8131686f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gold: 0
+  speedXP: 0
+  attackXP: 0
+  boostXP: 0
+  lastArea: 0
+  speedLvl: 0
+  attackLvl: 0
+  boostLvl: 0
+  headwear: 0
+  costume: 0
+  gloves: 0
+  shoes: 0
+  solicia1: 0
+  solicia2: -1
+  sQuest1: 0
+  sQuest2: 0
+  sChest1: 0
+  sChest2: 0
+  sChest3: 0
+  sChest4: 0
+--- !u!114 &752606731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752606725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abfaaede24013c043a45591f061b2285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  save: {fileID: 752606730}
 --- !u!1001 &863911058
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3587,6 +3639,9 @@ MonoBehaviour:
   item: 
   money: {fileID: 1113696949}
   player: {fileID: 1274776888}
+  save: {fileID: 752606730}
+  area: Solicia
+  number: 3
 --- !u!95 &995263148
 Animator:
   serializedVersion: 3
@@ -3955,6 +4010,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   display: {fileID: 1113696947}
+  saveControl: {fileID: 752606730}
 --- !u!1 &1128635923 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: d70588f1efe53f54a906924c846e4e9a,
@@ -4100,6 +4156,9 @@ MonoBehaviour:
   item: 0
   money: {fileID: 1113696949}
   goldAmount: 10
+  area: Solicia
+  number: 1
+  save: {fileID: 752606730}
 --- !u!1 &1152783190 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1301953457125904004, guid: efc4f80ca6fd0ea4c875c0faab5a90c9,
@@ -6038,6 +6097,9 @@ MonoBehaviour:
   item: 0
   money: {fileID: 1113696949}
   goldAmount: 30
+  area: Solicia
+  number: 2
+  save: {fileID: 752606730}
 --- !u!136 &1617146206
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6317,6 +6379,9 @@ MonoBehaviour:
   item: 
   money: {fileID: 1113696949}
   player: {fileID: 1274776888}
+  save: {fileID: 752606730}
+  area: Solicia
+  number: 2
 --- !u!95 &1775674633
 Animator:
   serializedVersion: 3
@@ -6397,6 +6462,9 @@ MonoBehaviour:
   item: 
   money: {fileID: 1113696949}
   player: {fileID: 1274776888}
+  save: {fileID: 752606730}
+  area: Solicia
+  number: 4
 --- !u!95 &1789416640
 Animator:
   serializedVersion: 3

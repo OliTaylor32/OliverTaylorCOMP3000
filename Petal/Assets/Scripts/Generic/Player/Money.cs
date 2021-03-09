@@ -7,9 +7,12 @@ public class Money : MonoBehaviour
 {
     private int money;
     public Text display;
+    public SaveControl saveControl;
     // Start is called before the first frame update
     void Start()
     {
+        saveControl.Load();
+        money = saveControl.gold;
         UpdateDisplay();
     }
 
@@ -28,6 +31,8 @@ public class Money : MonoBehaviour
     {
         money = money + amount;
         UpdateDisplay();
+        saveControl.gold = money;
+        saveControl.Save();
     }
 
     private void UpdateDisplay()

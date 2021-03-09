@@ -38,7 +38,7 @@ public class FinishLine : MonoBehaviour
         cam.transform.parent = null;
         cam.transform.rotation = cameraRot;
         cam.transform.position = cameraPos;
-        yield return new WaitForSecondsRealtime(10.0f);
+        yield return new WaitForSecondsRealtime(3.0f);
         Application.LoadLevel(stage.handle);
     }
 }

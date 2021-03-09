@@ -21,14 +21,34 @@ public class FetchNPC : MonoBehaviour
     public Money money;
     public int goldAmount;
 
+    public string area;
+    public int number;
+    public SaveControl save;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        complete = false;
+        save.Load();
+        if (area == "Solicia")
+        {
+            switch (number)
+            {
+                case 1:
+                    complete = save.sQuest1;
+                    item = save.sQuest1;
+                    started = save.sQuest1;
+                    break;
+                case 2:
+                    complete = save.sQuest2;
+                    item = save.sQuest2;
+                    started = save.sQuest2;
+                    break;
+                default:
+                    break;
+            }
+        }
         axisFree = true;
-        started = false;
-        item = false;
         i = 0;
     }
 
@@ -109,6 +129,21 @@ public class FetchNPC : MonoBehaviour
         if (item == true)
         {
             complete = true;
+            if (area == "Solicia")
+            {
+                switch (number)
+                {
+                    case 1:
+                        save.sQuest1 = true;
+                        break;
+                    case 2:
+                        save.sQuest2 = true;
+                        break;
+                    default:
+                        break;
+                }
+            }
+            save.Save();
         }
 
         text.SetActive(false);

@@ -134,8 +134,9 @@ GameObject:
   - component: {fileID: 248692731}
   - component: {fileID: 248692730}
   - component: {fileID: 248692729}
+  - component: {fileID: 248692734}
   m_Layer: 0
-  m_Name: Text (TMP) (1)
+  m_Name: ContinueData
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -162,12 +163,12 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Current Location: Solicia
 
-    Gold: 0
+    Gold: 500
 
     Speed lvl: 1
 
-    Attack lvl:
-    1
+    Attack
+    lvl: 1
 
     Boost lvl: 1'
   m_isRightToLeft: 0
@@ -238,7 +239,7 @@ MonoBehaviour:
   m_margin: {x: 3.0963488, y: 0, z: 12.192936, w: 0.9353695}
   m_textInfo:
     textComponent: {fileID: 248692729}
-    characterCount: 73
+    characterCount: 75
     spriteCount: 0
     spaceCount: 13
     wordCount: 14
@@ -335,6 +336,19 @@ RectTransform:
   m_AnchoredPosition: {x: 10.92, y: 1.58}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &248692734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248692728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dff3c0cd3ac91f2449c76f7bda9d2e2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  save: {fileID: 1505321128}
 --- !u!1 &952009425
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,8 +550,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffcf22f7ac02cff48abd081eb8538139, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  newGame: 0
   newGameSelect: {fileID: 2019342333}
   continueSelect: {fileID: 1464092514}
+  save: {fileID: 1505321128}
 --- !u!1 &1021411510
 GameObject:
   m_ObjectHideFlags: 0
@@ -828,6 +844,7 @@ GameObject:
   - component: {fileID: 1505321127}
   - component: {fileID: 1505321126}
   - component: {fileID: 1505321125}
+  - component: {fileID: 1505321128}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -900,6 +917,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &1505321128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505321124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 803ea352d900b1e45989acc8131686f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gold: 0
+  speedXP: 0
+  attackXP: 0
+  boostXP: 0
+  lastArea: 0
+  speedLvl: 0
+  attackLvl: 0
+  boostLvl: 0
+  headwear: 0
+  costume: 0
+  gloves: 0
+  shoes: 0
+  solicia1: 0
+  solicia2: -1
+  sQuest1: 0
+  sQuest2: 0
+  sChest1: 0
+  sChest2: 0
+  sChest3: 0
+  sChest4: 0
 --- !u!1 &2010416056
 GameObject:
   m_ObjectHideFlags: 0
