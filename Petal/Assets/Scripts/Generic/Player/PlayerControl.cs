@@ -86,6 +86,7 @@ public class PlayerControl : MonoBehaviour
             camera.transform.parent = transform;
             camera.transform.localPosition = new Vector3(35, 10, 1);
             camera.transform.localRotation = Quaternion.Euler(0f, 270f, 0f);
+            attackRange.GetComponent<BoxCollider>().size = new Vector3(6f, 1f, 8f);
 
             if (verticalAxis >= 0.01)
             {
@@ -167,7 +168,7 @@ public class PlayerControl : MonoBehaviour
                 stomping = false;
             }
 
-            if (Input.GetButton("Attack"))
+            if (Input.GetButtonDown("Attack"))
             {
                 attackRange.GetComponent<AttackRange>().Attack(power, false);
                 attacking = true;
@@ -205,6 +206,7 @@ public class PlayerControl : MonoBehaviour
             anim.SetBool("Idle", false);
             acceleration = 0f;
             sideMovement = 0f;
+            attackRange.GetComponent<BoxCollider>().size = new Vector3(6f, 1f, 8f);
 
             if (horizontalAxis >= 0.01 && lane != 2 && canStep == true && reverse == false || horizontalAxis <= -0.01 && lane != 2 && canStep == true && reverse == true)
             {
@@ -257,7 +259,7 @@ public class PlayerControl : MonoBehaviour
                 boosting = false;
             }
 
-            if (Input.GetButton("Attack"))
+            if (Input.GetButtonDown("Attack"))
             {
                 attackRange.GetComponent<AttackRange>().Attack(power, false);
                 attacking = true;
@@ -305,6 +307,7 @@ public class PlayerControl : MonoBehaviour
             Vector3 prevPos = transform.position;
             float fixX = transform.rotation.x;
             float fixZ = transform.rotation.z;
+            attackRange.GetComponent<BoxCollider>().size = new Vector3(4f, 1f, 4f);
             //Camera is in fixed position, points towards player
             //Movement dependant on camera
             //Speed max speed is halfed. 
@@ -365,6 +368,7 @@ public class PlayerControl : MonoBehaviour
             oldPos = transform.position;
             transform.Rotate(0, horizontalAxis2 * 2, 0);
             camera.transform.Rotate(-verticalAxis2, 0, 0);
+            attackRange.GetComponent<BoxCollider>().size = new Vector3(4f, 1f, 4f);
 
             Vector3 move = transform.forward * horizontalAxis + transform.right * -verticalAxis;
             controller.Move((maxSpeed / 4) * Time.deltaTime * move);
@@ -484,8 +488,9 @@ public class PlayerControl : MonoBehaviour
                 anim.SetBool("DriftL", false);
                 anim.SetBool("DriftR", false);
                 anim.SetBool("Stomp", true);
+                anim.SetBool("Attack", false);
             }
-            if (jumping == true)
+            else if (jumping == true)
             {
                 anim.SetBool("Run", false);
                 anim.SetBool("Idle", false);
@@ -493,16 +498,18 @@ public class PlayerControl : MonoBehaviour
                 anim.SetBool("DriftL", false);
                 anim.SetBool("DriftR", false);
                 anim.SetBool("Stomp", false);
+                anim.SetBool("Attack", false);
             }
-            //else if (controller.isGrounded == false)
-            //{
-            //    anim.SetBool("Run", false);
-            //    anim.SetBool("Idle", false);
-            //    anim.SetBool("Jump", false);
-            //    anim.SetBool("DriftL", false);
-            //    anim.SetBool("DriftR", false);
-            //    anim.SetBool("Stomp", false);
-            //}
+            else if (attacking == true)
+            {
+                anim.SetBool("Run", false);
+                anim.SetBool("Idle", false);
+                anim.SetBool("Jump", false);
+                anim.SetBool("DriftL", false);
+                anim.SetBool("DriftR", false);
+                anim.SetBool("Stomp", false);
+                anim.SetBool("Attack", true);
+            }
             else if (speed <= 0.5f)
             {
                 anim.SetBool("Run", false);
@@ -511,6 +518,7 @@ public class PlayerControl : MonoBehaviour
                 anim.SetBool("DriftL", false);
                 anim.SetBool("DriftR", false);
                 anim.SetBool("Stomp", false);
+                anim.SetBool("Attack", false);
             }
             else if (speed > 0.5f)
             {
@@ -524,6 +532,7 @@ public class PlayerControl : MonoBehaviour
                         anim.SetBool("DriftL", false);
                         anim.SetBool("DriftR", true);
                         anim.SetBool("Stomp", false);
+                        anim.SetBool("Attack", false);
                     }
 
                     if (Input.GetAxis("Horizontal") == 0)
@@ -534,6 +543,7 @@ public class PlayerControl : MonoBehaviour
                         anim.SetBool("DriftL", false);
                         anim.SetBool("DriftR", false);
                         anim.SetBool("Stomp", false);
+                        anim.SetBool("Attack", false);
                     }
 
                     if (Input.GetAxis("Horizontal") < 0)
@@ -544,6 +554,7 @@ public class PlayerControl : MonoBehaviour
                         anim.SetBool("DriftL", true);
                         anim.SetBool("DriftR", false);
                         anim.SetBool("Stomp", false);
+                        anim.SetBool("Attack", false);
                     }
                 }
                 else
@@ -554,6 +565,7 @@ public class PlayerControl : MonoBehaviour
                     anim.SetBool("DriftL", false);
                     anim.SetBool("DriftR", false);
                     anim.SetBool("Stomp", false);
+                    anim.SetBool("Attack", false);
 
                 }
 
@@ -566,6 +578,8 @@ public class PlayerControl : MonoBehaviour
                     anim.speed = 1;
                 }
             }
+
+        attacking = false;
 
     }
     private IEnumerator Jump()
