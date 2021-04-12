@@ -113,7 +113,6 @@ public class SaveControl : MonoBehaviour
 
     public void GetArea()
     {
-        lastArea = 0;
         switch (SceneManager.GetActiveScene().name)
         {
             case "Solicia":
@@ -126,32 +125,33 @@ public class SaveControl : MonoBehaviour
                 lastArea = 0;
                 break;
         }
+        Save();
     }
 
     public void ResetData()
     {
-        int gold = 0;
-        int speedXP = 0;
-        int attackXP = 0;
-        int boostXP = 0;
-        int lastArea = 0; //0-Solicia, 1-Solicia2, 2-Solicia3
-        int speedLvl = 0;
-        int attackLvl = 0;
-        int boostLvl = 0;
-        int headwear = 0;
-        int costume = 0;
-        int gloves = 0;
-        int shoes = 0;
+        gold = 0;
+        speedXP = 0;
+        attackXP = 0;
+        boostXP = 0;
+        lastArea = 0; //0-Solicia, 1-Solicia2, 2-Solicia3
+        speedLvl = 0;
+        attackLvl = 0;
+        boostLvl = 0;
+        headwear = 0;
+        costume = 0;
+        gloves = 0;
+        shoes = 0;
 
         //Solicia Data
-        int solicia1 = 0; //0-not completed, 1-C, 2-B, 3-A
-        int solicia2 = -1; //-1 not unlocked, 0-not completed, 1-C, 2-B, 3-A
-        bool sQuest1 = false; //Talking to veg seller
-        bool sQuest2 = false; //Finding the Wallet
-        bool sChest1 = false;
-        bool sChest2 = false;
-        bool sChest3 = false;
-        bool sChest4 = false;
+        solicia1 = 0; //0-not completed, 1-C, 2-B, 3-A
+        solicia2 = -1; //-1 not unlocked, 0-not completed, 1-C, 2-B, 3-A
+        sQuest1 = false; //Talking to veg seller
+        sQuest2 = false; //Finding the Wallet
+        sChest1 = false;
+        sChest2 = false;
+        sChest3 = false;
+        sChest4 = false;
         Save();
     }
 }

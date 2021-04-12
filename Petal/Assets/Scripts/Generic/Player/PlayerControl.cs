@@ -366,8 +366,16 @@ public class PlayerControl : MonoBehaviour
         if (controlType == 3)
         {
             oldPos = transform.position;
-            transform.Rotate(0, horizontalAxis2 * 2, 0);
-            camera.transform.Rotate(-verticalAxis2, 0, 0);
+
+            if (Input.GetButton("Drift"))
+            {
+                transform.Rotate(0, -2, 0);
+            }
+            if (Input.GetButton("Trick"))
+            {
+                transform.Rotate(0, 2, 0);
+            }
+            //camera.transform.Rotate(-verticalAxis2, 0, 0);
             attackRange.GetComponent<BoxCollider>().size = new Vector3(4f, 1f, 4f);
 
             Vector3 move = transform.forward * horizontalAxis + transform.right * -verticalAxis;

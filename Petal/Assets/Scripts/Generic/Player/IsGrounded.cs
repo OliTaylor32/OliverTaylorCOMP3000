@@ -22,7 +22,7 @@ public class IsGrounded : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<PlayerControl>() == null && other.gameObject.name != "PostProcessing" && other.GetComponent<SunEnergy>() == null)
+        if (other.GetComponent<PlayerControl>() == null && other.gameObject.name != "PostProcessing" && other.GetComponent<SunEnergy>() == null && other.GetComponent<StrafeStart>() == null && other.gameObject.name != "DeathBarrier" && other.gameObject.name != "IceCreamVan" && other.gameObject.GetComponent<SegmentCull>() == null)
         {
             ground++;
             print("New Ground");
@@ -31,7 +31,7 @@ public class IsGrounded : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.GetComponent<PlayerControl>() == null && other.gameObject.name != "PostProcessing" && other.GetComponent<SunEnergy>() == null)
+        if (other.GetComponent<PlayerControl>() == null && other.gameObject.name != "PostProcessing" && other.GetComponent<SunEnergy>() == null && other.GetComponent<StrafeStart>() == null && other.gameObject.name != "DeathBarrier" && other.gameObject.name != "IceCreamVan" && other.gameObject.GetComponent<SegmentCull>() == null)
         {
             ground--;
             print("ground Gone");

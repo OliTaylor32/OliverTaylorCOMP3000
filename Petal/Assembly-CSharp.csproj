@@ -91,6 +91,7 @@
     <Compile Include="Assets\Scripts\Generic\PlayerData\LastAreaTrack.cs" />
     <Compile Include="Assets\Scripts\Generic\PlayerData\MainGameData.cs" />
     <Compile Include="Assets\Scripts\Generic\PlayerData\SaveControl.cs" />
+    <Compile Include="Assets\Scripts\Generic\SegmentCull.cs" />
     <Compile Include="Assets\Scripts\Generic\UI\BoostSlider.cs" />
     <Compile Include="Assets\Scripts\Generic\UI\LevelSelect.cs" />
     <Compile Include="Assets\Scripts\Generic\UI\LifeMeter.cs" />
@@ -101,6 +102,7 @@
     <Compile Include="Assets\Scripts\Generic\UI\Ranking.cs" />
     <Compile Include="Assets\Scripts\Generic\UI\Scoring.cs" />
     <Compile Include="Assets\Scripts\Generic\UI\Timer.cs" />
+    <Compile Include="Assets\Scripts\Level1\CarChase.cs" />
     <Compile Include="Assets\Scripts\Level1\Drawbridge.cs" />
     <Compile Include="Assets\Scripts\Level4\Player\WaterRun.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
