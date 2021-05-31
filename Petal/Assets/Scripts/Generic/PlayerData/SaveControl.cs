@@ -21,6 +21,7 @@ public class SaveControl : MonoBehaviour
     public int costume = 0;
     public int gloves = 0;
     public int shoes = 0;
+    public int xp = 0;
 
     //Solicia Data
     public int solicia1 = 0; //0-not completed, 1-C, 2-B, 3-A
@@ -31,6 +32,8 @@ public class SaveControl : MonoBehaviour
     public bool sChest2 = false;
     public bool sChest3 = false;
     public bool sChest4 = false;
+    public bool sCostume1 = false;
+    public bool sCostume2 = false;
 
 
     // Start is called before the first frame update
@@ -61,8 +64,8 @@ public class SaveControl : MonoBehaviour
             file = File.Create(dest);
         }
 
-        MainGameData savedata = new MainGameData(gold, speedXP, attackXP, boostXP, lastArea, speedLvl, attackLvl, boostLvl, headwear, costume, gloves, shoes, 
-            solicia1, solicia2, sQuest1, sQuest2, sChest1, sChest2, sChest3, sChest4);
+        MainGameData savedata = new MainGameData(gold, speedXP, attackXP, boostXP, lastArea, speedLvl, attackLvl, boostLvl, headwear, costume, gloves, shoes, xp,
+            solicia1, solicia2, sQuest1, sQuest2, sChest1, sChest2, sChest3, sChest4, sCostume1, sCostume2);
         BinaryFormatter formatter = new BinaryFormatter();
         formatter.Serialize(file, savedata);
         file.Close();
@@ -94,6 +97,7 @@ public class SaveControl : MonoBehaviour
             costume = savedata.costume;
             gloves = savedata.gloves;
             shoes = savedata.shoes;
+            xp = savedata.xp;
 
             solicia1 = savedata.solicia1;
             solicia2 = savedata.solicia2;
@@ -103,6 +107,8 @@ public class SaveControl : MonoBehaviour
             sChest2 = savedata.sChest2;
             sChest3 = savedata.sChest3;
             sChest4 = savedata.sChest4;
+            sCostume1 = savedata.sCostume1;
+            sCostume2 = savedata.sCostume2;
 
         }
         else
@@ -142,6 +148,7 @@ public class SaveControl : MonoBehaviour
         costume = 0;
         gloves = 0;
         shoes = 0;
+        xp = 0;
 
         //Solicia Data
         solicia1 = 0; //0-not completed, 1-C, 2-B, 3-A
@@ -152,6 +159,8 @@ public class SaveControl : MonoBehaviour
         sChest2 = false;
         sChest3 = false;
         sChest4 = false;
+        sCostume1 = false;
+        sCostume2 = false;
         Save();
     }
 }

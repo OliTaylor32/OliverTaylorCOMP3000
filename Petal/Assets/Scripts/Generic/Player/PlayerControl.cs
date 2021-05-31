@@ -10,6 +10,11 @@ public class PlayerControl : MonoBehaviour
     public Scoring score;
     private Animator anim;
     public GameObject playerModel;
+    public SaveControl save;
+
+    //Costumes
+    public GameObject body;
+    public Material[] costumes;
 
     //General Variables
     public int life = 3;
@@ -60,6 +65,8 @@ public class PlayerControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        save.Load();
+
         canTrick = false;
         jumping = false;
         stomping = false;
@@ -67,6 +74,8 @@ public class PlayerControl : MonoBehaviour
         drifting = false;
         attacking = false;
         power = 1;
+
+        body.GetComponent<SkinnedMeshRenderer>().material = costumes[save.costume];
 
         camera = GameObject.Find("Main Camera");
         controller = GetComponent<CharacterController>();
@@ -689,7 +698,7 @@ public class PlayerControl : MonoBehaviour
     {
         if (hit.gameObject.GetComponent<WoodCrate>() != null)
         {
-            if (boosting == true)
+            if (boosting == true || attacking == true)
             {
                 hit.gameObject.GetComponent<WoodCrate>().Contact();
                 score.AddScore(20);
@@ -768,6 +777,11 @@ public class PlayerControl : MonoBehaviour
             life = life - 1;
             StartCoroutine(invincibility());
         }
+    }
+
+    public void ChangeCostume()
+    {
+        body.GetComponent<SkinnedMeshRenderer>().material = costumes[save.costume];
     }
 
 }

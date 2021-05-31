@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menus/Awards.unity
     guid: b26e4ed89bcd95e4f9d02a4ef9083577
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Menus/LevelSelect.unity
     guid: 3ea17fe237edb4945a1deb08d26c949c
   - enabled: 0

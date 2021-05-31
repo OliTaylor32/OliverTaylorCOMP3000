@@ -14,6 +14,7 @@ public class MainGameData
     public int costume;
     public int gloves;
     public int shoes;
+    public int xp;
 
     //Solicia Data
     public int solicia1; //0-not completed, 1-C, 2-B, 3-A
@@ -24,9 +25,11 @@ public class MainGameData
     public bool sChest2;
     public bool sChest3;
     public bool sChest4;
+    public bool sCostume1;
+    public bool sCostume2;
 
-    public MainGameData(int gold, int speedXP, int attackXP, int boostXP, int lastArea, int speedlvl, int attacklvl, int boostlvl, int headwear, int costume, int gloves, int shoes,
-        int solicia1, int solicia2, bool sQuest1, bool sQuest2, bool sChest1, bool sChest2, bool sChest3, bool sChest4)
+    public MainGameData(int gold, int speedXP, int attackXP, int boostXP, int lastArea, int speedlvl, int attacklvl, int boostlvl, int headwear, int costume, int gloves, int shoes, int xp,
+        int solicia1, int solicia2, bool sQuest1, bool sQuest2, bool sChest1, bool sChest2, bool sChest3, bool sChest4, bool sCostume1, bool sCostume2)
     {
         this.gold = gold;
         this.speedXP = speedXP;
@@ -40,6 +43,7 @@ public class MainGameData
         this.costume = costume;
         this.gloves = gloves;
         this.shoes = shoes;
+        this.xp = xp;
 
         this.solicia1 = solicia1;
         this.solicia2 = solicia2;
@@ -49,6 +53,8 @@ public class MainGameData
         this.sChest2 = sChest2;
         this.sChest3 = sChest3;
         this.sChest4 = sChest4;
+        this.sCostume1 = sCostume1;
+        this.sCostume2 = sCostume2;
     }
 
 }

@@ -3260,6 +3260,12 @@ MonoBehaviour:
   controlType: 0
   score: {fileID: 0}
   playerModel: {fileID: 1301953457125904004}
+  save: {fileID: 0}
+  body: {fileID: 4866429192808252852}
+  costumes:
+  - {fileID: 2100000, guid: bf33c59b077ab424aad4618b73e203da, type: 2}
+  - {fileID: 2100000, guid: 8634d0af228c0cc43a81e583d16fa188, type: 2}
+  - {fileID: 2100000, guid: 5e8e73b79078cf14ba1a655c027abcf1, type: 2}
   life: 3
   speed: 0
   maxSpeed: 50
@@ -3269,7 +3275,7 @@ MonoBehaviour:
   boosting: 0
   jumping: 0
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  attackRange: {fileID: 0}
+  attackRange: {fileID: 4020786156265364443}
 --- !u!1 &7003267653433224605
 GameObject:
   m_ObjectHideFlags: 0

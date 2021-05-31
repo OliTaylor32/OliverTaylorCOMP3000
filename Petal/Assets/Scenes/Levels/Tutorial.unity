@@ -3742,7 +3742,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1274986446}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1274986447}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb703c78936e85642ae67e4b7f9efbb5, type: 3}
@@ -4261,6 +4261,11 @@ PrefabInstance:
       propertyPath: isGrounded
       value: 
       objectReference: {fileID: 417872617}
+    - target: {fileID: 5107682313704698689, guid: efc4f80ca6fd0ea4c875c0faab5a90c9,
+        type: 3}
+      propertyPath: save
+      value: 
+      objectReference: {fileID: 1274986448}
     - target: {fileID: 7003267653046774936, guid: efc4f80ca6fd0ea4c875c0faab5a90c9,
         type: 3}
       propertyPath: m_Name
@@ -4323,6 +4328,47 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efc4f80ca6fd0ea4c875c0faab5a90c9, type: 3}
+--- !u!1 &1274986447 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7003267653046774936, guid: efc4f80ca6fd0ea4c875c0faab5a90c9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1274986446}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1274986448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274986447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 803ea352d900b1e45989acc8131686f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gold: 0
+  speedXP: 0
+  attackXP: 0
+  boostXP: 0
+  lastArea: 0
+  speedLvl: 0
+  attackLvl: 0
+  boostLvl: 0
+  headwear: 0
+  costume: 0
+  gloves: 0
+  shoes: 0
+  xp: 0
+  solicia1: 0
+  solicia2: -1
+  sQuest1: 0
+  sQuest2: 0
+  sChest1: 0
+  sChest2: 0
+  sChest3: 0
+  sChest4: 0
+  sCostume1: 0
+  sCostume2: 0
 --- !u!1001 &1337679665
 PrefabInstance:
   m_ObjectHideFlags: 0

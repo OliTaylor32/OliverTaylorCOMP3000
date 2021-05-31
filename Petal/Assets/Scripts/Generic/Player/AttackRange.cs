@@ -67,7 +67,13 @@ public class AttackRange : MonoBehaviour
             interactable = other.gameObject;
             interactableType = 4;
         }
+        if (other.gameObject.GetComponent<Shop>() != null)
+        {
+            print("TaskNPC In range");
+            interactable = other.gameObject;
+            interactableType = 5;
         }
+    }
 
     private void OnTriggerExit(Collider other)
     {
@@ -113,6 +119,12 @@ public class AttackRange : MonoBehaviour
         {
             print("Start Interaction");
             interactable.GetComponent<Chest>().StartInteraction();
+        }
+
+        if (interactableType == 5)
+        {
+            print("Start Interaction");
+            interactable.GetComponent<Shop>().StartInteraction();
         }
     }
 

@@ -43,18 +43,22 @@ public class Ranking : MonoBehaviour
         if (rank == 0)
         {
             GetComponent<Image>().sprite = c;
+            save.xp = save.xp + 250 + (score.score / 2);
         }
         else if (rank == 1)
         {
             GetComponent<Image>().sprite = b;
+            save.xp = save.xp + 500 + (score.score / 2);
         }
         else if (rank == 2)
         {
             GetComponent<Image>().sprite = a;
+            save.xp = save.xp + 750 + (score.score / 2);
         }
         else
         {
             GetComponent<Image>().sprite = c;
+            save.xp = save.xp + 250 + (score.score / 2);
         }
         GetComponent<Image>().enabled = true;
 
