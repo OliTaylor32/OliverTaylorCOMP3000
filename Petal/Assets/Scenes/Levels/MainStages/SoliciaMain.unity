@@ -74040,6 +74040,11 @@ PrefabInstance:
       propertyPath: cameraRot.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2625297988974631631, guid: 4526f0e171742a243a1342031a930d0f,
+        type: 3}
+      propertyPath: stage.m_Handle
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6061590037503230424, guid: 4526f0e171742a243a1342031a930d0f,
         type: 3}
       propertyPath: m_Name
